@@ -32,7 +32,7 @@ export function ListingCard({ listing }: ListingCardProps) {
           <div className="flex justify-between items-center mb-2">
             <p className="font-semibold text-primary">{formatCurrency(listing.price)}</p>
           </div>
-          <h3 className="text-lg font-serif font-medium mb-2">{listing.title}</h3>
+          <h3 className="text-2xl font-serif font-medium mb-2 text-foreground">{listing.title}</h3>
           <p className="text-sm text-muted-foreground mb-4">
             {listing.suburb}, {listing.city}
           </p>
