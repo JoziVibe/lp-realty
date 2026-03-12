@@ -1,25 +1,54 @@
+'use client';
 import type { Listing } from '@/lib/types';
 import { formatCurrency } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Bed, Bath } from 'lucide-react';
+import { useRef } from 'react';
 
 interface ListingCardProps {
   listing: Listing;
 }
 
 export function ListingCard({ listing }: ListingCardProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseEnter = () => {
+    videoRef.current?.play();
+  };
+
+  const handleMouseLeave = () => {
+    videoRef.current?.pause();
+  };
+  
   return (
-    <Link href="#" className="block group relative overflow-hidden rounded-2xl h-[450px]">
-      <Image
-        src={listing.imageUrl}
-        alt={listing.title}
-        fill
-        className="object-cover group-hover:scale-105 transition-transform duration-300"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        data-ai-hint={listing.imageHint}
-      />
+    <Link 
+      href="#" 
+      className="block group relative overflow-hidden rounded-2xl h-[450px]"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {listing.videoUrl ? (
+        <video
+          ref={videoRef}
+          src={listing.videoUrl}
+          poster={listing.imageUrl}
+          muted
+          loop
+          playsInline
+          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+        />
+      ) : (
+        <Image
+          src={listing.imageUrl}
+          alt={listing.title}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          data-ai-hint={listing.imageHint}
+        />
+      )}
       
       <div className="absolute inset-0 bg-gradient-to-t from-[#003f47]/80 via-[#003f47]/40 to-transparent" />
       
