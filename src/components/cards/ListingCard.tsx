@@ -15,11 +15,15 @@ export function ListingCard({ listing }: ListingCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
-    videoRef.current?.play();
+    if (listing.videoUrl) {
+      videoRef.current?.play();
+    }
   };
 
   const handleMouseLeave = () => {
-    videoRef.current?.pause();
+    if (listing.videoUrl) {
+      videoRef.current?.pause();
+    }
   };
   
   return (
