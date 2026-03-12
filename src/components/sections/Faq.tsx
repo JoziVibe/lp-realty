@@ -44,25 +44,13 @@ const faqItems = [
 export function Faq() {
     return (
       <Section>
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-                <h2 className="text-4xl font-medium text-foreground">Frequently asked questions</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    Our experts provide comprehensive answers to your most pressing questions about real estate.
-                </p>
-                <div className="mt-8">
-                    <div className="aspect-video w-full">
-                        <iframe
-                            className="w-full h-full rounded-xl"
-                            src="https://www.youtube.com/embed/9mef9hc1ZMw"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </div>
-            </div>
+        <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-4xl font-medium text-foreground">Frequently asked questions</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+                Our experts provide comprehensive answers to your most pressing questions about real estate.
+            </p>
+        </div>
+        <div className="mt-12 max-w-2xl mx-auto">
             <Accordion type="single" defaultValue="item-0" collapsible className="w-full">
                 {faqItems.map((item, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>
