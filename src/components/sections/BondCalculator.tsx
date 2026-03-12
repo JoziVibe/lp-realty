@@ -76,7 +76,7 @@ export function BondCalculator() {
                     id="purchase-price"
                     value={purchasePrice.toLocaleString()}
                     onChange={handlePriceChange}
-                    className="pl-7 bg-white/10 border-white/20 focus-visible:ring-primary"
+                    className="pl-7 bg-white/10 border-white/20 focus-visible:ring-primary rounded-full"
                   />
                 </div>
                 <Slider
@@ -97,7 +97,7 @@ export function BondCalculator() {
                       id="deposit"
                       value={deposit.toLocaleString()}
                       onChange={handleDepositChange}
-                      className="pl-7 bg-white/10 border-white/20 focus-visible:ring-primary"
+                      className="pl-7 bg-white/10 border-white/20 focus-visible:ring-primary rounded-full"
                     />
                 </div>
                  <Slider
@@ -118,7 +118,7 @@ export function BondCalculator() {
                     type="number"
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="mt-2 bg-white/10 border-white/20 focus-visible:ring-primary"
+                    className="mt-2 bg-white/10 border-white/20 focus-visible:ring-primary rounded-full"
                     step="0.01"
                   />
                    <Slider
@@ -137,7 +137,7 @@ export function BondCalculator() {
                     type="number"
                     value={loanTerm}
                     onChange={(e) => setLoanTerm(Number(e.target.value))}
-                    className="mt-2 bg-white/10 border-white/20 focus-visible:ring-primary"
+                    className="mt-2 bg-white/10 border-white/20 focus-visible:ring-primary rounded-full"
                   />
                    <Slider
                     value={[loanTerm]}
@@ -170,7 +170,7 @@ export function BondCalculator() {
                   </div>
               </div>
 
-               <Button className="w-full mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
+               <Button className="w-full mt-8 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
                   Apply for Pre-qualification
                 </Button>
             </div>
