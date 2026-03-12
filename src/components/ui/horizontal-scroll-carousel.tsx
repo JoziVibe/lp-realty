@@ -27,7 +27,7 @@ export const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> =
       <CarouselContent className="-ml-4">
         {listings.map((listing) => (
           <CarouselItem key={listing.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-            <div className="p-1 h-full">
+            <div className="p-1">
               <ListingCard listing={listing} />
             </div>
           </CarouselItem>
