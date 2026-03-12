@@ -1,5 +1,5 @@
 import { Hero } from '@/components/sections/Hero';
-import { SecondaryHero } from '@/components/sections/SecondaryHero';
+import { Roadblocks } from '@/components/sections/Roadblocks';
 import { Stats } from '@/components/sections/Stats';
 import { Discover } from '@/components/sections/Discover';
 import { FeaturedListings } from '@/components/sections/FeaturedListings';
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <SecondaryHero />
+      <Roadblocks />
       <Stats />
       <Discover />
       <FeaturedListings />
