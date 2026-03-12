@@ -62,7 +62,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               },
             },
           }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground"
+          className="text-5xl md:text-7xl font-medium tracking-tighter text-foreground"
         >
           {typeof title === 'string' ? (
             title.split(" ").map((word, i) => (
