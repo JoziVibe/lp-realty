@@ -1,6 +1,5 @@
 import { Hero } from '@/components/sections/Hero';
 import { Roadblocks } from '@/components/sections/Roadblocks';
-import { Stats } from '@/components/sections/Stats';
 import { Discover } from '@/components/sections/Discover';
 import { FeaturedListings } from '@/components/sections/FeaturedListings';
 import { Faq } from '@/components/sections/Faq';
@@ -12,7 +11,6 @@ export default function Home() {
     <>
       <Hero />
       <Roadblocks />
-      <Stats />
       <Discover />
       <FeaturedListings />
       <Faq />
