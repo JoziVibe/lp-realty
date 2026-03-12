@@ -21,18 +21,18 @@ export function PropertySearchForm() {
     }
     
   return (
-    <div className="mt-8 w-full max-w-5xl mx-auto p-4 rounded-2xl bg-background/70 backdrop-blur-sm border border-white/20 shadow-lg">
+    <div className="mt-8 w-full max-w-4xl mx-auto p-2 rounded-full bg-background/70 backdrop-blur-sm border border-white/20 shadow-lg">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-10 items-center gap-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-10 items-center gap-2">
             <FormField
             control={form.control}
             name="location"
             render={({ field }) => (
-                <FormItem className="md:col-span-4">
+                <FormItem className="md:col-span-5">
                     <FormControl>
                         <div className="relative">
-                            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                            <Input {...field} placeholder="Enter a location..." className="h-14 text-base pl-10 bg-white" />
+                            <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                            <Input {...field} placeholder="Enter a location..." className="h-12 text-base pl-12 bg-white rounded-full border-0 focus-visible:ring-offset-0 focus-visible:ring-2" />
                         </div>
                     </FormControl>
                 </FormItem>
@@ -46,7 +46,7 @@ export function PropertySearchForm() {
                     <FormItem className="md:col-span-2">
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                                <SelectTrigger className="h-14 text-base bg-white">
+                                <SelectTrigger className="h-12 text-base bg-white rounded-full border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
                                     <div className="flex items-center gap-2">
                                         <Home className="h-5 w-5 text-muted-foreground" />
                                         <SelectValue placeholder="Type" />
@@ -71,7 +71,7 @@ export function PropertySearchForm() {
                     <FormItem className="md:col-span-2">
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                                <SelectTrigger className="h-14 text-base bg-white">
+                                <SelectTrigger className="h-12 text-base bg-white rounded-full border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
                                      <div className="flex items-center gap-2">
                                         <DollarSign className="h-5 w-5 text-muted-foreground" />
                                         <SelectValue placeholder="Price" />
@@ -90,9 +90,9 @@ export function PropertySearchForm() {
                 )}
             />
 
-            <Button type="submit" size="lg" className="h-14 text-base font-semibold w-full md:col-span-2">
-                <Search className="mr-2 h-5 w-5" />
-                Search
+            <Button type="submit" size="icon" className="h-12 w-12 rounded-full w-full md:col-span-1">
+                <Search className="h-5 w-5" />
+                <span className="sr-only">Search</span>
             </Button>
         </form>
       </Form>
