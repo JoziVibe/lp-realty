@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <AnimatedMarqueeHero
       tagline="Over 200,000+ properties sold"
-      title="Where Luxury Homes Find Their People."
+      title={<>Where Luxury Homes Find <span className="italic text-primary">Their People.</span></>}
       description="We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over R1 billion in deals."
       images={DEMO_IMAGES}
     />
