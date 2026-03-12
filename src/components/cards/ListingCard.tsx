@@ -12,7 +12,7 @@ interface ListingCardProps {
 export function ListingCard({ listing }: ListingCardProps) {
   return (
     <Link href="#" className="block group">
-      <div className="bg-card rounded-2xl overflow-hidden h-full flex flex-col">
+      <div className="bg-[#f4efe5] rounded-2xl overflow-hidden h-full flex flex-col">
         <div className="relative h-64">
           <Image
             src={listing.imageUrl}
