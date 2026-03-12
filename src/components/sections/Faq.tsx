@@ -6,6 +6,7 @@ import {
   } from "@/components/ui/accordion"
 import { Section } from "../layout/Section"
 import { Button } from "../ui/button"
+import Image from "next/image"
   
 const faqItems = [
     {
@@ -65,14 +66,24 @@ export function Faq() {
                 </Accordion>
             </div>
             <div className="lg:col-span-1">
-                <div className="p-8 rounded-2xl bg-secondary h-fit sticky top-24">
-                    <h3 className="text-xl font-semibold text-foreground">Still have questions?</h3>
-                    <p className="mt-2 text-muted-foreground">
-                        Can't find the answer you're looking for? Our team is here to help. Get in touch with us today for a personalized consultation.
-                    </p>
-                    <Button asChild className="mt-6 w-full rounded-full">
-                      <a href="#">Contact Us</a>
-                    </Button>
+                <div className="relative rounded-2xl h-fit sticky top-24 overflow-hidden text-white">
+                    <Image
+                        src="https://picsum.photos/seed/faq-cta/600/800"
+                        alt="Person on a call"
+                        fill
+                        className="object-cover"
+                        data-ai-hint="customer service representative"
+                    />
+                    <div className="absolute inset-0 bg-[#003f47]/90" />
+                    <div className="relative p-12 flex flex-col">
+                        <h3 className="text-2xl font-semibold">Still have questions?</h3>
+                        <p className="mt-2 text-gray-200">
+                            Can't find the answer you're looking for? Our team is here to help. Get in touch with us today for a personalized consultation.
+                        </p>
+                        <Button asChild className="mt-6 w-full rounded-full">
+                          <a href="#">Contact Us</a>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>
