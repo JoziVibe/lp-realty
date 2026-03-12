@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -71,7 +71,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 variants={FADE_IN_ANIMATION_VARIANTS}
                 className="inline-block"
               >
-                {word} 
+                {word}{' '}
               </motion.span>
             ))
           ) : (
