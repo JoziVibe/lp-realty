@@ -1,7 +1,7 @@
 import { listings } from '@/lib/data';
-import { ListingCard } from '@/components/cards/ListingCard';
 import { Section } from '../layout/Section';
 import { Button } from '../ui/button';
+import { HorizontalScrollCarousel } from '../ui/horizontal-scroll-carousel';
 
 export function FeaturedListings() {
   const featuredListings = listings.filter(l => l.isFeatured);
@@ -18,12 +18,8 @@ export function FeaturedListings() {
           </div>
           <Button variant="outline" className="bg-background rounded-full px-6 flex-shrink-0">View All Properties</Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredListings.map((listing) => (
-              <ListingCard key={listing.id} listing={listing} />
-          ))}
-        </div>
       </div>
+      <HorizontalScrollCarousel listings={featuredListings} />
     </Section>
   );
 }
