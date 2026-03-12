@@ -3,11 +3,14 @@ import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
-import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
+import { Inter } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'LP Realty - Where Tradition Meets Innovation',
-  description: "South Africa's Only Media-First Real Estate Agency. Taking South Africa to the World.",
+  title: 'Residence - Build Your Future, One Property at a Time.',
+  description: 'Find your next property with Residence. We help you find the best value properties.',
 };
 
 export default function RootLayout({
@@ -17,16 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-sans antialiased bg-neutral-white text-neutral-charcoal">
+      <body className={cn("antialiased", inter.className)}>
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <FloatingWhatsApp />
         <Toaster />
       </body>
     </html>

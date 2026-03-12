@@ -1,40 +1,26 @@
 import { listings } from '@/lib/data';
 import { ListingCard } from '@/components/cards/ListingCard';
-import { Section, SectionLabel } from '../layout/Section';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Section } from '../layout/Section';
+import { Button } from '../ui/button';
 
 export function FeaturedListings() {
   const featuredListings = listings.filter(l => l.isFeatured);
 
   return (
-    <Section id="featured">
-      <div className="text-center max-w-2xl mx-auto">
-        <SectionLabel>Our Portfolio</SectionLabel>
-        <h2>Featured Listings</h2>
-        <p className="mt-4 text-base text-neutral-mid">
-          A curated selection of our finest properties. Each one tells a unique story.
-        </p>
+    <Section id="featured" className="bg-secondary">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+        <div>
+          <h2 className="text-4xl font-bold">Explore our premier houses</h2>
+          <p className="mt-2 text-lg text-muted-foreground">
+            Find the best properties and luxurious houses that are available for sale.
+          </p>
+        </div>
+        <Button variant="outline" className="bg-background rounded-full px-6 flex-shrink-0">View All Properties</Button>
       </div>
-      <div className="mt-12">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
-            {featuredListings.map((listing) => (
-              <CarouselItem key={listing.id} className="md:basis-1/2 lg:basis-1/3">
-                 <div className="p-1 h-full">
-                    <ListingCard listing={listing} />
-                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:inline-flex" />
-          <CarouselNext className="hidden md:inline-flex" />
-        </Carousel>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredListings.map((listing) => (
+            <ListingCard key={listing.id} listing={listing} />
+        ))}
       </div>
     </Section>
   );

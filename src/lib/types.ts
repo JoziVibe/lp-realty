@@ -2,22 +2,14 @@ export interface Listing {
   id: string;
   title: string;
   suburb: string;
-  city: 'Johannesburg' | 'Cape Town';
+  city: string;
   price: number;
   bedrooms: number;
   bathrooms: number;
-  sizeM2: number;
-  plotM2?: number;
-  status: 'For Sale' | 'To Rent' | 'Sold' | 'New Listing' | 'Under Offer' | 'Off Market' | 'Coming Soon';
-  type: 'House' | 'Apartment' | 'Estate' | 'Penthouse' | 'Townhouse' | 'Residential' | 'Commercial' | 'New Development';
-  parking: number;
-  features: string[];
+  status: 'For Sale' | 'For Rent' | 'Sold';
   imageUrl: string;
   imageHint: string;
-  agentId: string;
   isFeatured?: boolean;
-  youtubeId?: string;
-  description: string;
 }
 
 export interface Agent {
