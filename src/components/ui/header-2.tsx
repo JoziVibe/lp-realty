@@ -74,7 +74,7 @@ export function Header() {
 							{link.label}
 						</a>
 					))}
-          <Button asChild className="rounded-full bg-[#ec9040] text-white hover:bg-[#003f47]">
+          <Button asChild className="rounded-full bg-primary hover:bg-[#003f47]">
             <Link href="#">
               Sell Your Home
               <ArrowRight />
@@ -114,7 +114,7 @@ export function Header() {
 						))}
 					</div>
 					<div className="flex flex-col gap-2">
-						<Button asChild className="w-full rounded-full bg-[#ec9040] text-white hover:bg-[#003f47]">
+						<Button asChild className="w-full rounded-full bg-primary hover:bg-[#003f47]">
 							<Link href="#">
                 Sell Your Home
                 <ArrowRight />

@@ -170,7 +170,7 @@ export function BondCalculator() {
                   </div>
               </div>
 
-               <Button className="w-full mt-8 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
+               <Button className="w-full mt-8 rounded-full">
                   Apply for Pre-qualification
                 </Button>
             </div>

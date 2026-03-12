@@ -18,7 +18,7 @@ export function Cta() {
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
                         Explore our listings, connect with our agents, and find the perfect property that exceeds your expectations.
                     </p>
-                    <Button size="lg" className="mt-8 bg-primary text-white font-semibold px-8 py-6 rounded-full hover:bg-primary/90 text-base">
+                    <Button size="lg" className="mt-8 font-semibold px-8 py-6 rounded-full text-base">
                         Join Now
                     </Button>
                 </div>
