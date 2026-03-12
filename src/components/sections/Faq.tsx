@@ -4,31 +4,40 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
-import Image from "next/image"
 import { Section } from "../layout/Section"
   
 const faqItems = [
     {
-        question: "What types of properties do you sell?",
-        answer: "We sell a wide range of properties including single-family homes, condos, townhouses, and multi-family units. We also have experience with luxury estates and new construction projects.",
-        image: "https://picsum.photos/seed/faq1/300/200",
-        imageHint: "modern living room"
+        question: "How is LP Realty different from a traditional agency?",
+        answer: "LP Realty is the only real estate agency in South Africa with a built-in media platform. Through Let's Prop In — our YouTube channel with 500,000+ followers — we market your property to a qualified, engaged audience that traditional listings simply cannot reach."
     },
     {
-        question: "How do I know if a property is a good investment?",
-        answer: "We provide comprehensive market analysis, including comparable sales, neighborhood trends, and potential for appreciation. Our goal is to ensure you make an informed decision that aligns with your financial goals."
+        question: "What areas do you operate in?",
+        answer: "We specialise in Johannesburg and Cape Town, with deep expertise in Sandton, Eye of Africa Estate, Sea Point, and surrounding suburbs. We also handle selected properties beyond these markets — contact us to discuss your area."
     },
     {
-        question: "Do I need to hire a real estate agent?",
-        answer: "While not mandatory, a real estate agent provides invaluable expertise, negotiation skills, and access to a wider network of listings. We guide you through the complex paperwork and legalities, saving you time and stress."
+        question: "How do I get a valuation on my home?",
+        answer: "Reach out via our contact form or WhatsApp and one of our agents will arrange a no-obligation market assessment. We provide an honest, data-backed valuation — not an inflated figure designed to win your mandate."
     },
     {
-        question: "What's the process for buying a property?",
-        answer: "The process generally involves getting pre-approved for a mortgage, finding a property, making an offer, home inspection, and closing. We will guide you through each step of this journey."
+        question: "What does it cost to list with LP Realty?",
+        answer: "Our commission structure is competitive and fully transparent. There are no hidden marketing fees — our media production and platform exposure are part of what we do, not an add-on you pay extra for."
     },
     {
-        question: "Can I tour a property before purchasing?",
-        answer: "Absolutely! We encourage property tours. We can arrange for in-person viewings or provide high-quality virtual tours to help you get a feel for the property from anywhere in the world."
+        question: "How do I apply for a home loan through LP Realty?",
+        answer: "Our home loan service connects you with South Africa's leading banks to find the most competitive bond rate for your situation. Use the bond calculator on this page to estimate your repayments, then contact us to start the formal pre-qualification process."
+    },
+    {
+        question: "Can LP Realty help me find a rental property?",
+        answer: "Yes. We manage a curated portfolio of rental properties across Johannesburg and Cape Town. Whether you're looking for a long-term lease or a premium short-stay, speak to our operations team and we'll find the right fit."
+    },
+    {
+        question: "How long does it take to sell a property with LP Realty?",
+        answer: "Timeline depends on the property, pricing, and market conditions — but our media-driven approach consistently shortens the selling cycle. Several of our recent listings have sold within two weeks of going live, reaching buyers who were already watching the channel."
+    },
+    {
+        question: "I'm a first-time buyer. Where do I start?",
+        answer: "Start with our bond calculator to understand what you can afford, then browse our listings filtered by your budget and preferred city. When you're ready, one of our agents will guide you through every stage — from viewing to transfer — at no cost to you as the buyer."
     }
 ]
   
@@ -48,11 +57,6 @@ export function Faq() {
                         <AccordionTrigger className="text-lg font-semibold">{item.question}</AccordionTrigger>
                         <AccordionContent className="text-base text-muted-foreground">
                             {item.answer}
-                            {index === 0 && item.image && (
-                                <div className="mt-4 rounded-lg overflow-hidden aspect-video relative">
-                                    <Image src={item.image} alt={item.question} fill className="object-cover" data-ai-hint={item.imageHint}/>
-                                </div>
-                            )}
                         </AccordionContent>
                     </AccordionItem>
                 ))}
