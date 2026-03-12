@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { MenuToggleIcon } from '@/components/ui/menu-toggle-icon';
@@ -64,9 +65,14 @@ export function Header() {
 					},
 				)}
 			>
-				<Link href="/" className="text-lg">
-					<span className="font-sans font-semibold text-[#003f47]">LP</span>
-					<span className="font-serif italic font-medium text-foreground"> Realty</span>
+				<Link href="/" className="flex items-center">
+					<Image
+						src="/logo.png"
+						alt="LP Realty"
+						width={120}
+						height={30}
+						priority
+					/>
 				</Link>
 				<div className="hidden items-center gap-2 md:flex">
 					{links.map((link) => (
@@ -74,7 +80,7 @@ export function Header() {
 							{link.label}
 						</a>
 					))}
-          <Button asChild className="rounded-full bg-primary hover:bg-[#003f47]">
+          <Button asChild className="rounded-full bg-[#003f47] text-primary-foreground hover:bg-[#003f47]/90">
             <Link href="#">
               Sell Your Home
               <ArrowRight />
@@ -114,7 +120,7 @@ export function Header() {
 						))}
 					</div>
 					<div className="flex flex-col gap-2">
-						<Button asChild className="w-full rounded-full bg-primary hover:bg-[#003f47]">
+						<Button asChild className="w-full rounded-full bg-[#003f47] text-primary-foreground hover:bg-[#003f47]/90">
 							<Link href="#">
                 Sell Your Home
                 <ArrowRight />
