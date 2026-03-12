@@ -49,11 +49,11 @@ export function BondCalculator() {
   return (
     <Section removePadding className="relative text-white">
       <Image
-        src="https://picsum.photos/seed/bond-calc-bg/1920/1080"
-        alt="Modern kitchen"
+        src="https://picsum.photos/seed/cape-town-bg/1920/1080"
+        alt="A beautiful view of Cape Town"
         fill
         className="object-cover"
-        data-ai-hint="modern kitchen background"
+        data-ai-hint="Cape Town"
       />
       <div className="absolute inset-0 bg-[#003f47]/90" />
       
