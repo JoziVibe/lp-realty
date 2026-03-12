@@ -28,7 +28,7 @@ export function Hero() {
           Property Today
         </>
       }
-      description="We provide the best value for your investment and help you find the perfect house for your future. We are committed to providing the best service to our clients."
+      description="We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over a billion rand in deals."
       images={DEMO_IMAGES}
     />
   );
