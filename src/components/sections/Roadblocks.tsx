@@ -60,9 +60,7 @@ export function Roadblocks() {
             Removing the roadblocks to your dream home
           </h2>
           <p className="max-w-xl text-base md:text-lg text-muted-foreground">
-            It's easy to get lost in a sea of listings, conflicting advice, and
-            endless paperwork. We filter out the noise, focus on what truly
-            matters, and give you the clarity that lets you find the perfect home.
+            Buying or selling in South Africa's premium market takes more than a listing and a prayer. LP Realty brings the expertise, the media reach, and the relationships to move your property — or find you the right one — with confidence and clarity.
           </p>
           <div className="relative mx-auto max-w-3xl overflow-hidden">
             <div className="absolute left-0 z-10 h-full w-20 bg-gradient-to-r from-secondary" />
