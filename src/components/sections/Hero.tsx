@@ -21,13 +21,7 @@ export function Hero() {
   return (
     <AnimatedMarqueeHero
       tagline="Over 200,000+ properties sold"
-      title={
-        <>
-          Find Your Dream
-          <br />
-          Property Today
-        </>
-      }
+      title="Where Properties Find Their People."
       description="We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over a billion rand in deals."
       images={DEMO_IMAGES}
     />
