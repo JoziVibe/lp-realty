@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Marquee } from "@/components/ui/marquee";
 import { Award, Eye, Film, Map } from "lucide-react";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const marqueeData = [
     "What's my home worth right now?",
@@ -47,6 +47,10 @@ const features = [
 ];
 
 const rotatingWords = ["Seller", "Buyer"];
+const TYPING_SPEED = 120;
+const DELETING_SPEED = 80;
+const PAUSE_DURATION = 2000;
+
 
 export function Roadblocks() {
   const m1 = marqueeData.slice(0, Math.ceil(marqueeData.length / 3));
@@ -57,14 +61,33 @@ export function Roadblocks() {
   const m3 = marqueeData.slice(Math.ceil((marqueeData.length / 3) * 2));
 
   const [wordIndex, setWordIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
-    }, 2500);
+    const handleTyping = () => {
+      const currentWord = rotatingWords[wordIndex];
+      if (isDeleting) {
+        setText(currentWord.substring(0, text.length - 1));
+      } else {
+        setText(currentWord.substring(0, text.length + 1));
+      }
 
-    return () => clearInterval(interval);
-  }, []);
+      if (!isDeleting && text === currentWord) {
+        setTimeout(() => setIsDeleting(true), PAUSE_DURATION);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+      }
+    };
+
+    const typingTimeout = setTimeout(
+      handleTyping,
+      isDeleting ? DELETING_SPEED : TYPING_SPEED
+    );
+
+    return () => clearTimeout(typingTimeout);
+  }, [text, wordIndex, isDeleting]);
 
   return (
     <section className="relative bg-secondary pt-20 sm:pt-40 text-secondary-foreground">
@@ -73,21 +96,18 @@ export function Roadblocks() {
           <h2 className="max-w-3xl font-medium text-4xl sm:text-5xl lg:text-6xl text-foreground">
             The Right{" "}
             <span className="inline-grid text-left">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={rotatingWords[wordIndex]}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.3 }}
-                  className="col-start-1 row-start-1 text-primary"
-                >
-                  {rotatingWords[wordIndex]}
-                </motion.span>
-              </AnimatePresence>
-              <span className="invisible col-start-1 row-start-1">
-                Seller
-              </span>
+                <span className="col-start-1 row-start-1 text-primary">
+                    {text}
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: [0, 1, 0] }}
+                        transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }}
+                        className="inline-block w-px h-[0.8em] ml-1 bg-primary align-middle"
+                    />
+                </span>
+                <span className="invisible col-start-1 row-start-1">
+                    {rotatingWords.reduce((a, b) => (a.length > b.length ? a : b))}
+                </span>
             </span>{" "}
             Exists. We Know How to Find Them.
           </h2>
