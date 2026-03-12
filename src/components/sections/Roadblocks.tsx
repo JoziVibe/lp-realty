@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Marquee } from "@/components/ui/marquee";
-import { Leaf, Sparkles, ShieldCheck, Handshake } from "lucide-react";
+import { Award, Eye, Film, Map } from "lucide-react";
 
 const marqueeData = [
   "What's the best mortgage for me?",
@@ -21,28 +21,24 @@ const marqueeData = [
 
 const features = [
   {
-    description:
-      "No jargon, no overcomplication — just clear steps you can follow to buy or sell your home with confidence.",
-    icon: Leaf,
-    title: "Simple & Clear Process",
+    title: "Over a Billion Brokered",
+    description: "Our agents have collectively closed over R1 Billion in residential transactions. You get that depth of experience working for you, every step of the way.",
+    icon: Award,
   },
   {
-    description:
-      "Every property we list is vetted to help you get the best value for your investment, faster and smarter.",
-    icon: Sparkles,
-    title: "Focus on Best Value",
+    title: "500,000 Eyes on You",
+    description: "No other South African agency puts your listing in front of a half-million engaged property followers. Let's Prop In turns views into verified, motivated buyers.",
+    icon: Eye,
   },
   {
-    description:
-      "With years of hands-on experience in the market, we bring proven strategies and practical solutions to the table.",
-    icon: ShieldCheck,
-    title: "Expert Knowledge",
+    title: "Media That Moves Markets",
+    description: "Our in-house film studio produces cinematic content that makes properties impossible to scroll past. Every listing is a campaign, not just a classified ad.",
+    icon: Film,
   },
   {
-    description:
-      "From your first viewing to getting the keys, we provide ongoing support, not just a one-time transaction.",
-    icon: Handshake,
-    title: "End-to-End Support",
+    title: "Two Cities, One Team",
+    description: "With offices in Sea Point and Eye of Africa Estate, we operate across Cape Town and Johannesburg with the same standard of service in both markets.",
+    icon: Map,
   },
 ];
 
