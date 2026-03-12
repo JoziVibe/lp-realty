@@ -5,6 +5,7 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { MenuToggleIcon } from '@/components/ui/menu-toggle-icon';
 import { useScroll } from '@/components/ui/use-scroll';
+import { ArrowRight } from 'lucide-react';
 
 export function Header() {
 	const [open, setOpen] = React.useState(false);
@@ -20,11 +21,11 @@ export function Header() {
 			href: '#',
 		},
 		{
-			label: 'Property',
+			label: 'Properties',
 			href: '#',
 		},
     {
-			label: 'Pages',
+			label: 'Contact Us',
 			href: '#',
 		},
 	];
@@ -47,9 +48,9 @@ export function Header() {
 	return (
 		<header
 			className={cn(
-				'sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-transparent md:rounded-md md:border md:transition-all md:ease-out',
+				'sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-transparent md:border md:transition-all md:ease-out',
 				{
-					'bg-background/95 supports-[backdrop-filter]:bg-background/50 border-border backdrop-blur-lg md:top-4 md:max-w-4xl md:shadow':
+					'bg-background/95 supports-[backdrop-filter]:bg-background/50 border-border backdrop-blur-lg md:top-4 md:max-w-4xl md:shadow md:rounded-full':
 						scrolled && !open,
 					'bg-background/90': open,
 				},
@@ -65,16 +66,16 @@ export function Header() {
 			>
 				<Link href="/" className="font-bold text-lg">residence.</Link>
 				<div className="hidden items-center gap-2 md:flex">
-					{links.map((link, i) => (
+					{links.map((link) => (
 						<a key={link.label} className={buttonVariants({ variant: 'ghost' })} href={link.href}>
 							{link.label}
 						</a>
 					))}
-          <Button asChild variant="outline">
-            <Link href="#">Sign In</Link>
-          </Button>
-          <Button asChild>
-            <Link href="#">Get Started</Link>
+          <Button asChild className="rounded-full">
+            <Link href="#">
+              Sell Your Home
+              <ArrowRight />
+            </Link>
           </Button>
 				</div>
 				<Button size="icon" variant="outline" onClick={() => setOpen(!open)} className="md:hidden">
@@ -110,11 +111,11 @@ export function Header() {
 						))}
 					</div>
 					<div className="flex flex-col gap-2">
-						<Button asChild variant="outline" className="w-full">
-							<Link href="#">Sign In</Link>
-						</Button>
-						<Button asChild className="w-full">
-							<Link href="#">Get Started</Link>
+						<Button asChild className="w-full rounded-full">
+							<Link href="#">
+                Sell Your Home
+                <ArrowRight />
+              </Link>
 						</Button>
 					</div>
 				</div>
