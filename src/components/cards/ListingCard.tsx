@@ -21,10 +21,10 @@ export function ListingCard({ listing }: ListingCardProps) {
         data-ai-hint={listing.imageHint}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#003f47]/80 via-[#003f47]/40 to-transparent" />
       
       <Badge
-        className="absolute top-4 left-4 bg-white text-foreground hover:bg-white/90"
+        className="absolute top-4 left-4 bg-white/50 backdrop-blur-sm border-white/20 text-[#003f47] hover:bg-white/70"
       >
         {listing.status}
       </Badge>
