@@ -3,6 +3,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Marquee } from "@/components/ui/marquee";
 import { Award, Eye, Film, Map } from "lucide-react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const marqueeData = [
     "What's my home worth right now?",
@@ -44,6 +46,8 @@ const features = [
   },
 ];
 
+const rotatingWords = ["Seller", "Buyer"];
+
 export function Roadblocks() {
   const m1 = marqueeData.slice(0, Math.ceil(marqueeData.length / 3));
   const m2 = marqueeData.slice(
@@ -52,12 +56,40 @@ export function Roadblocks() {
   );
   const m3 = marqueeData.slice(Math.ceil((marqueeData.length / 3) * 2));
 
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative bg-secondary pt-20 sm:pt-40 text-secondary-foreground">
       <div className="mx-auto max-w-full">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-center space-y-4 px-5 text-center md:px-10">
           <h2 className="max-w-3xl font-medium text-4xl sm:text-5xl lg:text-6xl text-foreground">
-            Removing the roadblocks to your dream home
+            The Right{" "}
+            <span className="inline-grid text-left">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={rotatingWords[wordIndex]}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3 }}
+                  className="col-start-1 row-start-1 text-primary"
+                >
+                  {rotatingWords[wordIndex]}
+                </motion.span>
+              </AnimatePresence>
+              <span className="invisible col-start-1 row-start-1">
+                Seller
+              </span>
+            </span>{" "}
+            Exists. We Know How to Find Them.
           </h2>
           <p className="max-w-xl text-base md:text-lg text-muted-foreground">
             Buying or selling in South Africa's premium market takes more than a listing and a prayer. LP Realty brings the expertise, the media reach, and the relationships to move your property — or find you the right one — with confidence and clarity.
