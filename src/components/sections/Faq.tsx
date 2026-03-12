@@ -50,7 +50,7 @@ export function Faq() {
                 Our experts provide comprehensive answers to your most pressing questions about real estate.
             </p>
         </div>
-        <div className="mt-12 max-w-2xl mx-auto">
+        <div className="mt-12 max-w-3xl mx-auto">
             <Accordion type="single" defaultValue="item-0" collapsible className="w-full">
                 {faqItems.map((item, index) => (
                     <AccordionItem key={index} value={`item-${index}`}>
