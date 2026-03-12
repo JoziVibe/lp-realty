@@ -172,7 +172,7 @@ export const TeamSlider = ({
                 </p>
                 <h3 className="text-3xl font-medium mt-1 font-serif">{activeAgent.name}</h3>
                 <blockquote className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                  "{activeAgent.bio}"
+                  {activeAgent.bio}
                 </blockquote>
                 <a 
                   href={`mailto:${activeAgent.email}`} 
