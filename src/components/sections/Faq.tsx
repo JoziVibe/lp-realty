@@ -5,6 +5,7 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 import { Section } from "../layout/Section"
+import HoverPlayCard from "@/components/ui/hover-play-card";
   
 const faqItems = [
     {
@@ -50,6 +51,13 @@ export function Faq() {
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our experts provide comprehensive answers to your most pressing questions about real estate.
                 </p>
+                <div className="mt-8">
+                    <HoverPlayCard 
+                        src="https://videos.pexels.com/video-files/857195/857195-hd_1280_720_25fps.mp4" 
+                        poster="https://picsum.photos/seed/faq-video/600/400"
+                        className="w-full"
+                    />
+                </div>
             </div>
             <Accordion type="single" defaultValue="item-0" collapsible className="w-full">
                 {faqItems.map((item, index) => (
