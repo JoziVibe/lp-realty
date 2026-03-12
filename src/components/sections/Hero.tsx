@@ -1,3 +1,5 @@
+'use client';
+
 import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
 
 const DEMO_IMAGES = [
