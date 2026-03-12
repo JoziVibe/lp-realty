@@ -5,6 +5,7 @@ import { Faq } from '@/components/sections/Faq';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { Cta } from '@/components/sections/Cta';
 import { MeetTheTeam } from '@/components/sections/MeetTheTeam';
+import { BondCalculator } from '@/components/sections/BondCalculator';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturedListings />
       <MeetTheTeam />
       <Faq />
+      <BondCalculator />
       <Testimonials />
       <Cta />
     </>
