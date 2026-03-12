@@ -3,15 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { PropertySearchForm } from "../forms/PropertySearchForm";
 
 // Props interface for the component
 interface AnimatedMarqueeHeroProps {
   tagline: string;
   title: React.ReactNode;
   description: string;
-  ctaText: string;
   images: string[];
   className?: string;
 }
@@ -21,7 +20,6 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   tagline,
   title,
   description,
-  ctaText,
   images,
   className,
 }) => {
@@ -41,7 +39,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         className
       )}
     >
-      <div className="z-10 flex flex-col items-center">
+      <div className="z-10 flex flex-col items-center w-full">
         {/* Tagline */}
         <motion.div
           initial="hidden"
@@ -92,18 +90,15 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           {description}
         </motion.p>
 
-        {/* Call to Action Button */}
+        {/* Property Search Form */}
         <motion.div
           initial="hidden"
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.6 }}
+          className="w-full"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button size="lg" className="mt-8 rounded-full font-semibold shadow-lg">
-                {ctaText}
-            </Button>
-          </motion.div>
+          <PropertySearchForm />
         </motion.div>
       </div>
 

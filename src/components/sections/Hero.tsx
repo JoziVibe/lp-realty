@@ -27,7 +27,6 @@ export function Hero() {
         </>
       }
       description="We provide the best value for your investment and help you find the perfect house for your future. We are committed to providing the best service to our clients."
-      ctaText="Explore Properties"
       images={DEMO_IMAGES}
     />
   );
