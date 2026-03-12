@@ -64,7 +64,10 @@ export function Header() {
 					},
 				)}
 			>
-				<Link href="/" className="font-bold text-lg text-foreground">residence.</Link>
+				<Link href="/" className="text-lg">
+					<span className="font-sans font-semibold text-[#003f47]">LP</span>
+					<span className="font-serif italic font-medium text-foreground"> Realty</span>
+				</Link>
 				<div className="hidden items-center gap-2 md:flex">
 					{links.map((link) => (
 						<a key={link.label} className={buttonVariants({ variant: 'ghost', className: 'text-foreground' })} href={link.href}>
