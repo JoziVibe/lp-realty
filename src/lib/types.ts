@@ -21,6 +21,7 @@ export interface Agent {
   imageHint: string;
   email: string;
   initials: string;
+  bio: string;
 }
 
 export interface Testimonial {

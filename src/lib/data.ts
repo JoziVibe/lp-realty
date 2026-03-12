@@ -1,4 +1,4 @@
-import type { Listing, Testimonial } from './types';
+import type { Listing, Testimonial, Agent } from './types';
 
 export const listings: Listing[] = [
   {
@@ -104,4 +104,57 @@ export const testimonials: Testimonial[] = [
       imageUrl: "https://picsum.photos/seed/testimonial2/100/100",
       imageHint: "professional woman"
     },
+];
+
+export const agents: Agent[] = [
+  {
+    id: '1',
+    name: 'Johnathan Doe',
+    role: 'Lead Real Estate Agent',
+    email: 'john.doe@lprealty.com',
+    bio: "With over a decade of experience in luxury real estate, Johnathan has a proven track record of securing the best deals for his clients. His market knowledge is unparalleled.",
+    imageUrl: "https://picsum.photos/seed/agent1/400/600",
+    imageHint: "professional man portrait",
+    initials: "JD",
+  },
+  {
+    id: '2',
+    name: 'Jane Smith',
+    role: 'Senior Property Consultant',
+    email: 'jane.smith@lprealty.com',
+    bio: "Jane's passion for architecture and design gives her a unique eye for properties. She excels at matching clients with homes that are not just houses, but works of art.",
+    imageUrl: "https://picsum.photos/seed/agent2/400/600",
+    imageHint: "professional woman portrait",
+    initials: "JS",
+  },
+  {
+    id: '3',
+    name: 'Mike Johnson',
+    role: 'Investment Specialist',
+    email: 'mike.johnson@lprealty.com',
+    bio: "Specializing in high-yield investment properties, Mike helps clients build robust real estate portfolios that generate long-term wealth.",
+    imageUrl: "https://picsum.photos/seed/agent3/400/600",
+    imageHint: "smiling man corporate",
+    initials: "MJ",
+  },
+  {
+    id: '4',
+    name: 'Emily Williams',
+    role: 'Client Relations Manager',
+    email: 'emily.williams@lprealty.com',
+    bio: "Emily ensures every client's journey is seamless and enjoyable. Her attention to detail and commitment to service are second to none.",
+    imageUrl: "https://picsum.photos/seed/agent4/400/600",
+    imageHint: "friendly woman professional",
+    initials: "EW",
+  },
+  {
+    id: '5',
+    name: 'Chris Brown',
+    role: 'Marketing Director',
+    email: 'chris.brown@lprealty.com',
+    bio: "The mastermind behind our innovative marketing campaigns, Chris leverages cutting-edge media to showcase properties like never before.",
+    imageUrl: "https://picsum.photos/seed/agent5/400/600",
+    imageHint: "creative director portrait",
+    initials: "CB",
+  },
 ];

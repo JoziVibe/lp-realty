@@ -4,6 +4,7 @@ import { FeaturedListings } from '@/components/sections/FeaturedListings';
 import { Faq } from '@/components/sections/Faq';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { Cta } from '@/components/sections/Cta';
+import { MeetTheTeam } from '@/components/sections/MeetTheTeam';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Roadblocks />
       <FeaturedListings />
+      <MeetTheTeam />
       <Faq />
       <Testimonials />
       <Cta />
