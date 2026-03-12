@@ -6,6 +6,7 @@ export interface Listing {
   price: number;
   bedrooms: number;
   bathrooms: number;
+  parking: number;
   status: 'For Sale' | 'For Rent' | 'Sold';
   imageUrl: string;
   videoUrl?: string;

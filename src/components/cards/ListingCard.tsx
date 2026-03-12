@@ -4,7 +4,7 @@ import { formatCurrency } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import { Bed, Bath } from 'lucide-react';
+import { Bed, Bath, Car } from 'lucide-react';
 import { useRef } from 'react';
 
 interface ListingCardProps {
@@ -72,11 +72,15 @@ export function ListingCard({ listing }: ListingCardProps) {
               <div className="mt-4 flex items-center gap-4 text-sm font-light">
                   <div className="flex items-center gap-2">
                       <Bed className="w-4 h-4" />
-                      <span>{listing.bedrooms} Beds</span>
+                      <span>{listing.bedrooms}</span>
                   </div>
                   <div className="flex items-center gap-2">
                       <Bath className="w-4 h-4" />
-                      <span>{listing.bathrooms} Baths</span>
+                      <span>{listing.bathrooms}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                      <Car className="w-4 h-4" />
+                      <span>{listing.parking}</span>
                   </div>
               </div>
           </div>
