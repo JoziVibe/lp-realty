@@ -5,18 +5,20 @@ import { Marquee } from "@/components/ui/marquee";
 import { Award, Eye, Film, Map } from "lucide-react";
 
 const marqueeData = [
-  "What's the best mortgage for me?",
-  "How much can I afford?",
-  "What's the closing process like?",
-  "How do I negotiate the price?",
-  "How do I find a good agent?",
-  "What are the hidden costs of buying?",
-  "Should I buy or rent?",
-  "What is an escrow account?",
-  "How long does it take to buy a house?",
-  "What is a home inspection?",
-  "How do I make an offer?",
-  "What's a title search?",
+    "What's my home worth right now?",
+    "How do I sell above asking price?",
+    "Should I buy now or wait?",
+    "How much deposit do I need?",
+    "What does a bond application involve?",
+    "Can social media sell my home faster?",
+    "Which areas are growing in value?",
+    "What fees do I pay when selling?",
+    "Is renting smarter than buying now?",
+    "How long does a typical sale take?",
+    "What makes a listing attract buyers?",
+    "How do I find a high-yield investment?",
+    "What should I fix before listing?",
+    "How do I negotiate the best price?",
 ];
 
 const features = [
@@ -43,12 +45,12 @@ const features = [
 ];
 
 export function Roadblocks() {
-  const m1 = marqueeData.slice(0, marqueeData.length / 3);
+  const m1 = marqueeData.slice(0, Math.ceil(marqueeData.length / 3));
   const m2 = marqueeData.slice(
-    marqueeData.length / 3,
-    (marqueeData.length / 3) * 2
+    Math.ceil(marqueeData.length / 3),
+    Math.ceil((marqueeData.length / 3) * 2)
   );
-  const m3 = marqueeData.slice((marqueeData.length / 3) * 2);
+  const m3 = marqueeData.slice(Math.ceil((marqueeData.length / 3) * 2));
 
   return (
     <section className="relative bg-secondary pt-20 sm:pt-40 text-secondary-foreground">
