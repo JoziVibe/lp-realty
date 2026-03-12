@@ -25,7 +25,7 @@ export function Testimonials() {
             </div>
             <p className='ml-4 text-sm font-medium'>More than <span className='font-bold text-primary'>200+</span> Client Reviews</p>
         </div>
-        <h2 className="text-4xl font-bold">What our clients say about us</h2>
+        <h2 className="text-4xl font-medium text-foreground">What our clients say about us</h2>
       </div>
       <div className="mt-12">
       <Carousel

@@ -16,7 +16,7 @@ export function Discover() {
                     />
                 </div>
                 <div>
-                    <h2 className="text-4xl font-bold">Discover Properties with the Best Value</h2>
+                    <h2 className="text-4xl font-medium text-foreground">Discover Properties with the Best Value</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Explore the world of premier properties and luxurious houses with Residence. We provide the best value for your investment and help you find the perfect house.
                     </p>

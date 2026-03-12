@@ -37,7 +37,7 @@ export function Faq() {
       <Section>
         <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-                <h2 className="text-4xl font-bold">Frequently asked questions</h2>
+                <h2 className="text-4xl font-medium text-foreground">Frequently asked questions</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our experts provide comprehensive answers to your most pressing questions about real estate.
                 </p>

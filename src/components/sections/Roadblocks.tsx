@@ -58,7 +58,7 @@ export function Roadblocks() {
     <section className="relative bg-secondary pt-20 sm:pt-40 text-secondary-foreground">
       <div className="mx-auto max-w-full">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-center space-y-4 px-5 text-center md:px-10">
-          <h2 className="max-w-3xl font-bold text-4xl sm:text-5xl lg:text-6xl">
+          <h2 className="max-w-3xl font-medium text-4xl sm:text-5xl lg:text-6xl text-foreground">
             Removing the roadblocks to your dream home
           </h2>
           <p className="max-w-xl text-base md:text-lg text-muted-foreground">
