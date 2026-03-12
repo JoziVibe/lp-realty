@@ -125,7 +125,7 @@ export function Roadblocks() {
                 <Icon className="size-12 text-[#003f47]" />
 
                 <div className="flex flex-col gap-2 pt-10 lg:pt-20">
-                  <h3 className="font-bold text-2xl tracking-tight sm:text-3xl">
+                  <h3 className="font-serif font-medium text-2xl tracking-tight sm:text-3xl text-foreground">
                     {feature.title}
                   </h3>
                   <p className="leading-relaxed text-muted-foreground">{feature.description}</p>

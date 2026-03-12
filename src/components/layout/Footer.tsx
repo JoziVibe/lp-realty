@@ -34,7 +34,7 @@ export function Footer() {
       <div className="container py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <h3 className="text-xl font-bold text-foreground">Discover Nature's Wonders with Expert Guidance</h3>
+            <h3 className="font-serif font-medium text-xl text-foreground">Discover Nature's Wonders with Expert Guidance</h3>
             <p className="mt-4 text-muted-foreground">
               Sign up for our newsletter to get the latest news, updates, and offers.
             </p>
@@ -54,7 +54,7 @@ export function Footer() {
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
-                <h3 className="font-semibold uppercase tracking-wider text-sm text-foreground">{title}</h3>
+                <h3 className="font-serif font-medium uppercase tracking-wider text-sm text-foreground">{title}</h3>
                 <ul className="mt-4 space-y-3">
                   {links.map(({ label, href }) => (
                     <li key={label}>
