@@ -54,29 +54,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         <motion.h1
           initial="hidden"
           animate="show"
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
+          variants={FADE_IN_ANIMATION_VARIANTS}
+          transition={{ delay: 0.2 }}
           className="text-5xl md:text-7xl font-medium tracking-tighter text-foreground"
         >
-          {typeof title === 'string' ? (
-            title.split(" ").map((word, i) => (
-              <motion.span
-                key={i}
-                variants={FADE_IN_ANIMATION_VARIANTS}
-                className="inline-block"
-              >
-                {word}{' '}
-              </motion.span>
-            ))
-          ) : (
-            title
-          )}
+          {title}
         </motion.h1>
 
         {/* Description */}
