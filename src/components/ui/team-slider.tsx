@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import type { Agent } from "@/lib/types";
@@ -174,6 +174,13 @@ export const TeamSlider = ({
                 <blockquote className="mt-6 text-lg text-muted-foreground leading-relaxed">
                   "{activeAgent.bio}"
                 </blockquote>
+                <a 
+                  href={`mailto:${activeAgent.email}`} 
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>{activeAgent.email}</span>
+                </a>
               </motion.div>
             </AnimatePresence>
           </div>
