@@ -5,6 +5,7 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 import { Section } from "../layout/Section"
+import { Button } from "../ui/button"
   
 const faqItems = [
     {
@@ -50,17 +51,30 @@ export function Faq() {
                 Our experts provide comprehensive answers to your most pressing questions about real estate.
             </p>
         </div>
-        <div className="mt-12 max-w-3xl mx-auto">
-            <Accordion type="single" defaultValue="item-0" collapsible className="w-full">
-                {faqItems.map((item, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="text-lg font-semibold">{item.question}</AccordionTrigger>
-                        <AccordionContent className="text-base text-muted-foreground">
-                            {item.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
+        <div className="grid lg:grid-cols-3 gap-12 mt-12 max-w-7xl mx-auto items-start">
+            <div className="lg:col-span-2">
+                <Accordion type="single" defaultValue="item-0" collapsible className="w-full">
+                    {faqItems.map((item, index) => (
+                        <AccordionItem key={index} value={`item-${index}`}>
+                            <AccordionTrigger className="text-lg font-semibold text-left">{item.question}</AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground">
+                                {item.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </div>
+            <div className="lg:col-span-1">
+                <div className="p-8 rounded-2xl bg-secondary h-fit sticky top-24">
+                    <h3 className="text-xl font-semibold text-foreground">Still have questions?</h3>
+                    <p className="mt-2 text-muted-foreground">
+                        Can't find the answer you're looking for? Our team is here to help. Get in touch with us today for a personalized consultation.
+                    </p>
+                    <Button asChild className="mt-6 w-full rounded-full">
+                      <a href="#">Contact Us</a>
+                    </Button>
+                </div>
+            </div>
         </div>
       </Section>
     )
