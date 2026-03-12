@@ -76,7 +76,7 @@ export function Faq() {
                     />
                     <div className="absolute inset-0 bg-[#003f47]/90" />
                     <div className="relative p-12 flex flex-col">
-                        <h3 className="text-2xl font-semibold">Still have questions?</h3>
+                        <h3 className="text-2xl font-serif font-semibold">Still have questions?</h3>
                         <p className="mt-2 text-gray-200">
                             Can't find the answer you're looking for? Our team is here to help. Get in touch with us today for a personalized consultation.
                         </p>
