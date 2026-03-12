@@ -90,7 +90,7 @@ export function PropertySearchForm() {
                 )}
             />
 
-            <Button type="submit" size="icon" className="h-12 w-12 rounded-full w-full md:col-span-1">
+            <Button type="submit" size="icon" className="h-12 w-12 rounded-full w-full md:col-span-1 bg-[#003f47] text-white hover:bg-[#003f47]/90">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Search</span>
             </Button>

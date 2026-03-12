@@ -23,7 +23,7 @@ export function ListingCard({ listing }: ListingCardProps) {
             data-ai-hint={listing.imageHint}
           />
           <Badge
-            className="absolute top-4 left-4 bg-white text-foreground"
+            className="absolute top-4 left-4 bg-white/50 backdrop-blur-sm text-foreground"
           >
             {listing.status}
           </Badge>
@@ -32,7 +32,7 @@ export function ListingCard({ listing }: ListingCardProps) {
           <div className="flex justify-between items-center mb-2">
             <p className="font-semibold text-primary">{formatCurrency(listing.price)}</p>
           </div>
-          <h3 className="text-lg font-bold mb-2">{listing.title}</h3>
+          <h3 className="text-lg font-serif font-medium mb-2">{listing.title}</h3>
           <p className="text-sm text-muted-foreground mb-4">
             {listing.suburb}, {listing.city}
           </p>

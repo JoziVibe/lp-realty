@@ -64,14 +64,14 @@ export function Header() {
 					},
 				)}
 			>
-				<Link href="/" className="font-bold text-lg">residence.</Link>
+				<Link href="/" className="font-bold text-lg text-foreground">residence.</Link>
 				<div className="hidden items-center gap-2 md:flex">
 					{links.map((link) => (
-						<a key={link.label} className={buttonVariants({ variant: 'ghost' })} href={link.href}>
+						<a key={link.label} className={buttonVariants({ variant: 'ghost', className: 'text-foreground' })} href={link.href}>
 							{link.label}
 						</a>
 					))}
-          <Button asChild className="rounded-full">
+          <Button asChild className="rounded-full bg-[#ec9040] text-white hover:bg-[#003f47]">
             <Link href="#">
               Sell Your Home
               <ArrowRight />
@@ -102,7 +102,7 @@ export function Header() {
 								key={link.label}
 								className={buttonVariants({
 									variant: 'ghost',
-									className: 'justify-start',
+									className: 'justify-start text-foreground',
 								})}
 								href={link.href}
 							>
@@ -111,7 +111,7 @@ export function Header() {
 						))}
 					</div>
 					<div className="flex flex-col gap-2">
-						<Button asChild className="w-full rounded-full">
+						<Button asChild className="w-full rounded-full bg-[#ec9040] text-white hover:bg-[#003f47]">
 							<Link href="#">
                 Sell Your Home
                 <ArrowRight />

@@ -74,10 +74,9 @@ export function Roadblocks() {
               <Marquee className="[--duration:45s] [--gap:0.75rem]" repeat={4}>
                 {m1.map((q) => (
                   <Badge
-                    className="border-border bg-background text-foreground"
+                    className="border-transparent bg-[#003f47] text-white"
                     key={q}
                     size="lg"
-                    variant="outline"
                   >
                     {q}
                   </Badge>
@@ -91,10 +90,9 @@ export function Roadblocks() {
               >
                 {m2.map((q) => (
                   <Badge
-                    className="border-border bg-background text-foreground"
+                    className="border-transparent bg-[#003f47] text-white"
                     key={q}
                     size="lg"
-                    variant="outline"
                   >
                     {q}
                   </Badge>
@@ -104,10 +102,9 @@ export function Roadblocks() {
               <Marquee className="[--duration:42s] [--gap:0.75rem]" repeat={4}>
                 {m3.map((q) => (
                   <Badge
-                    className="border-border bg-background text-foreground"
+                    className="border-transparent bg-[#003f47] text-white"
                     key={q}
                     size="lg"
-                    variant="outline"
                   >
                     {q}
                   </Badge>
@@ -125,7 +122,7 @@ export function Roadblocks() {
                 className="flex flex-col gap-5 px-5 py-8 last:border-b-0 lg:border-b-0 lg:px-6 lg:py-10"
                 key={feature.title}
               >
-                <Icon className="size-12 text-primary" />
+                <Icon className="size-12 text-[#003f47]" />
 
                 <div className="flex flex-col gap-2 pt-10 lg:pt-20">
                   <h3 className="font-bold text-2xl tracking-tight sm:text-3xl">
