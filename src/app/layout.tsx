@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
-import { Navbar } from '@/components/layout/Navbar';
+import { Header } from '@/components/ui/header-2';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
 import { Inter } from 'next/font/google';
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={cn("antialiased", inter.className)}>
-        <Navbar />
+        <Header />
         <main>{children}</main>
         <Footer />
         <Toaster />
