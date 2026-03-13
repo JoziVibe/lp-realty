@@ -37,7 +37,7 @@ export function ListingCard({ listing }: ListingCardProps) {
 
       <div className="absolute inset-0 p-6 text-white flex flex-col justify-end">
         {/* This is the gradient and blur effect */}
-        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-sm [mask-image:linear-gradient(to_top,white_40%,transparent)]" />
+        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-md [mask-image:linear-gradient(to_top,white_40%,transparent)]" />
           
         {/* This holds the content and sits above the effect layer */}
         <div className="relative">
