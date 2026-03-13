@@ -25,8 +25,6 @@ export function ListingCard({ listing }: ListingCardProps) {
         data-ai-hint={listing.imageHint}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-t from-[#003f47]/80 via-transparent to-transparent" />
-      
       <Badge
         className="absolute top-4 left-4 bg-white/50 backdrop-blur-sm border-white/20 text-[#003f47] hover:bg-white/70"
       >
@@ -34,27 +32,31 @@ export function ListingCard({ listing }: ListingCardProps) {
       </Badge>
 
       <div className="absolute inset-0 p-6 text-white flex flex-col justify-end">
-          <div>
-              <h3 className="text-2xl font-bold">{formatCurrency(listing.price)}</h3>
-              <p className="text-lg font-serif font-medium mt-1 text-primary">{listing.title}</p>
-              <p className="text-sm text-gray-300 mt-2">
-                  {listing.suburb}, {listing.city}
-              </p>
-              <div className="mt-4 flex items-center gap-4 text-sm font-light">
-                  <div className="flex items-center gap-2">
-                      <Bed className="w-4 h-4" />
-                      <span>{listing.bedrooms}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                      <Bath className="w-4 h-4" />
-                      <span>{listing.bathrooms}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                      <Car className="w-4 h-4" />
-                      <span>{listing.parking}</span>
-                  </div>
-              </div>
-          </div>
+        {/* This is the gradient and blur effect */}
+        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-sm [mask-image:linear-gradient(to_top,white_40%,transparent)]" />
+          
+        {/* This holds the content and sits above the effect layer */}
+        <div className="relative">
+            <h3 className="text-2xl font-bold">{formatCurrency(listing.price)}</h3>
+            <p className="text-lg font-serif font-medium mt-1 text-primary">{listing.title}</p>
+            <p className="text-sm text-gray-300 mt-2">
+                {listing.suburb}, {listing.city}
+            </p>
+            <div className="mt-4 flex items-center gap-4 text-sm font-light">
+                <div className="flex items-center gap-2">
+                    <Bed className="w-4 h-4" />
+                    <span>{listing.bedrooms}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Bath className="w-4 h-4" />
+                    <span>{listing.bathrooms}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Car className="w-4 h-4" />
+                    <span>{listing.parking}</span>
+                </div>
+            </div>
+        </div>
       </div>
     </Link>
   );
