@@ -74,7 +74,7 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 			</div>
 			<div className="flex justify-center border-t p-3">
 				<p className="text-muted-foreground text-xs">
-					© {new Date().getFullYear()} Residence. All rights reserved.
+					© {new Date().getFullYear()} LP Realty. All rights reserved.
 				</p>
 			</div>
 		</footer>

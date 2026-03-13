@@ -18,8 +18,8 @@ const instrument_serif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: 'Residence - Build Your Future, One Property at a Time.',
-  description: 'Find your next property with Residence. We help you find the best value properties.',
+  title: 'LP Realty - Where Luxury Homes Find Their People.',
+  description: "We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over R1 billion in deals.",
 };
 
 export default function RootLayout({
