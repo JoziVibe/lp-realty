@@ -169,7 +169,7 @@ export function Roadblocks() {
                 className="flex flex-col gap-5 px-5 py-8 last:border-b-0 lg:border-b-0 lg:px-6 lg:py-10"
                 key={feature.title}
               >
-                <div className="relative size-12">
+                <div className="relative size-16">
                    <Image 
                     src={feature.iconSrc} 
                     alt={feature.title} 
