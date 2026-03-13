@@ -49,7 +49,7 @@ export function BondCalculator() {
   return (
     <Section removePadding className="relative text-white overflow-hidden">
       <Image
-        src="https://picsum.photos/seed/cape-town-bg/1920/1080"
+        src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="A beautiful view of Cape Town"
         fill
         className="object-cover"
@@ -156,7 +156,7 @@ export function BondCalculator() {
 
             <div className="bg-black/20 border border-white/10 rounded-xl p-8 flex flex-col justify-center backdrop-blur-md">
               <p className="text-white/80 text-sm font-medium uppercase tracking-wider">Estimated Monthly Repayment</p>
-              <p className="text-4xl lg:text-5xl font-bold text-white mt-3 drop-shadow-sm">{formatCurrency(monthlyRepayment)}</p>
+              <p className="text-4xl lg:text-5xl font-serif font-medium text-primary mt-3 drop-shadow-sm">{formatCurrency(monthlyRepayment)}</p>
               
               <div className="mt-10 space-y-4 text-sm">
                   <div className="flex justify-between items-center border-b border-white/10 pb-3">
