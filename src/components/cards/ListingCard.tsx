@@ -4,7 +4,7 @@ import { formatCurrency } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import { Bed, Bath, Car } from 'lucide-react';
+import { Bed, Bath, Car, MapPin, ArrowUpRight } from 'lucide-react';
 
 interface ListingCardProps {
   listing: Listing;
@@ -26,10 +26,14 @@ export function ListingCard({ listing }: ListingCardProps) {
       />
       
       <Badge
-        className="absolute top-4 left-4 bg-white/50 backdrop-blur-sm border-white/20 text-[#003f47] hover:bg-white/70"
+        className="absolute top-4 left-4 bg-white/30 backdrop-blur-md border border-white/20 text-[#003f47] hover:bg-white/50"
       >
         {listing.status}
       </Badge>
+
+      <div className="absolute top-4 right-4 h-10 w-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <ArrowUpRight className="w-5 h-5" />
+      </div>
 
       <div className="absolute inset-0 p-6 text-white flex flex-col justify-end">
         {/* This is the gradient and blur effect */}
@@ -39,9 +43,12 @@ export function ListingCard({ listing }: ListingCardProps) {
         <div className="relative">
             <h3 className="text-2xl font-bold">{formatCurrency(listing.price)}</h3>
             <p className="text-lg font-serif font-medium mt-1 text-primary">{listing.title}</p>
-            <p className="text-sm text-gray-300 mt-2">
-                {listing.suburb}, {listing.city}
-            </p>
+            
+            <div className="flex items-center gap-2 text-sm text-gray-300 mt-2">
+                <MapPin className="w-4 h-4 flex-shrink-0" />
+                <span>{listing.suburb}, {listing.city}</span>
+            </div>
+
             <div className="mt-4 flex items-center gap-4 text-sm font-light">
                 <div className="flex items-center gap-2">
                     <Bed className="w-4 h-4" />
