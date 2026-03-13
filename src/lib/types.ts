@@ -9,7 +9,6 @@ export interface Listing {
   parking: number;
   status: 'For Sale' | 'For Rent' | 'Sold';
   imageUrl: string;
-  videoUrl?: string;
   imageHint: string;
   isFeatured?: boolean;
 }

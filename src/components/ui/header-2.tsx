@@ -49,7 +49,7 @@ export function Header() {
 	return (
 		<header
 			className={cn(
-				'sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-transparent md:border md:transition-all md:ease-out',
+				'sticky top-0 z-50 mx-auto w-full max-w-5xl border-b border-transparent md:border md:transition-all md:ease-out md:mt-2',
 				{
 					'bg-background/95 supports-[backdrop-filter]:bg-background/50 border-border backdrop-blur-lg md:top-4 md:max-w-4xl md:shadow md:rounded-full':
 						scrolled && !open,
@@ -59,20 +59,22 @@ export function Header() {
 		>
 			<nav
 				className={cn(
-					'flex h-14 w-full items-center justify-between px-4 md:h-12 md:transition-all md:ease-out',
+					'flex h-16 w-full items-center justify-between px-4 md:h-20 md:transition-all md:ease-out',
 					{
-						'md:px-2': scrolled,
+						'md:px-6 md:h-16': scrolled,
 					},
 				)}
 			>
-				<Link href="/" className="flex items-center">
-					<Image
-						src="/logo.png"
-						alt="LP Realty"
-						width={120}
-						height={30}
-						priority
-					/>
+				<Link href="/" className="flex items-center h-full py-2">
+					<div className={cn("relative w-36 h-12", { "w-28 h-10": scrolled })}>
+						<Image
+							src="/logo.png"
+							alt="LP Realty"
+							fill
+							className="object-contain object-left"
+							priority
+						/>
+					</div>
 				</Link>
 				<div className="hidden items-center gap-2 md:flex">
 					{links.map((link) => (
@@ -94,7 +96,7 @@ export function Header() {
 
 			<div
 				className={cn(
-					'bg-background/90 fixed top-14 right-0 bottom-0 left-0 z-50 flex flex-col overflow-hidden border-y md:hidden',
+					'bg-background/90 fixed top-16 right-0 bottom-0 left-0 z-50 flex flex-col overflow-hidden border-y md:hidden',
 					open ? 'block' : 'hidden',
 				)}
 			>
