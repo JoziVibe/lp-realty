@@ -2,9 +2,9 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Marquee } from "@/components/ui/marquee";
-import { Award, Eye, Film, Map } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const marqueeData = [
     "What's my home worth right now?",
@@ -27,22 +27,22 @@ const features = [
   {
     title: "Over a Billion Brokered",
     description: "Our agents have collectively closed over R1 Billion in residential transactions. You get that depth of experience working for you, every step of the way.",
-    icon: Award,
+    iconSrc: "/feature/Over a Billion Brokered.png",
   },
   {
     title: "500,000 Eyes on You",
     description: "No other South African agency puts your listing in front of a half-million engaged property followers. Let's Prop In turns views into verified, motivated buyers.",
-    icon: Eye,
+    iconSrc: "/feature/500,000 Eyes on You.png",
   },
   {
     title: "Media That Moves Markets",
     description: "Our in-house film studio produces cinematic content that makes properties impossible to scroll past. Every listing is a campaign, not just a classified ad.",
-    icon: Film,
+    iconSrc: "/feature/Media That Moves Markets.png",
   },
   {
     title: "Two Cities, One Team",
     description: "With offices in Sea Point and Eye of Africa Estate, we operate across Cape Town and Johannesburg with the same standard of service in both markets.",
-    icon: Map,
+    iconSrc: "/feature/Two Cities, One Team.png",
   },
 ];
 
@@ -164,13 +164,19 @@ export function Roadblocks() {
 
         <div className="mt-10 grid grid-cols-1 divide-dashed divide-border border-border border-t sm:grid-cols-2 sm:divide-x lg:grid-cols-4">
           {features.map((feature) => {
-            const Icon = feature.icon;
             return (
               <div
                 className="flex flex-col gap-5 px-5 py-8 last:border-b-0 lg:border-b-0 lg:px-6 lg:py-10"
                 key={feature.title}
               >
-                <Icon className="size-12 text-[#003f47]" />
+                <div className="relative size-12">
+                   <Image 
+                    src={feature.iconSrc} 
+                    alt={feature.title} 
+                    fill 
+                    className="object-contain" 
+                   />
+                </div>
 
                 <div className="flex flex-col gap-2 pt-10 lg:pt-20">
                   <h3 className="font-serif font-medium text-2xl tracking-tight sm:text-3xl text-foreground">

@@ -7,7 +7,7 @@ export function Cta() {
         <Section removePadding>
             <div className="relative container bg-gray-900 rounded-2xl text-white py-20 px-8 text-center overflow-hidden">
                 <Image
-                    src="https://picsum.photos/seed/cta-bg/1200/400"
+                    src="/background/CTA BG.jpg"
                     alt="Modern house"
                     fill
                     className="object-cover opacity-30"

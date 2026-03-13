@@ -68,7 +68,7 @@ export function Faq() {
             <div className="lg:col-span-1">
                 <div className="relative rounded-2xl h-fit sticky top-24 overflow-hidden text-white">
                     <Image
-                        src="https://picsum.photos/seed/faq-cta/600/800"
+                        src="/background/FAQs CTA BG.jpg"
                         alt="Person on a call"
                         fill
                         className="object-cover"

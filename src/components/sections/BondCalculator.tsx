@@ -49,7 +49,7 @@ export function BondCalculator() {
   return (
     <Section removePadding className="relative text-white overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="/background/Bond Calculator BG.jpg"
         alt="A beautiful view of Cape Town"
         fill
         className="object-cover"
