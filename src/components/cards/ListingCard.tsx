@@ -49,16 +49,16 @@ export function ListingCard({ listing }: ListingCardProps) {
                 <span>{listing.suburb}, {listing.city}</span>
             </div>
 
-            <div className="mt-4 flex items-center gap-4 text-sm font-light">
-                <div className="flex items-center gap-2">
+            <div className="mt-4 flex items-center gap-2">
+                <div className="flex items-center gap-1.5 bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-xs">
                     <Bed className="w-4 h-4" />
                     <span>{listing.bedrooms}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5 bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-xs">
                     <Bath className="w-4 h-4" />
                     <span>{listing.bathrooms}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5 bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-xs">
                     <Car className="w-4 h-4" />
                     <span>{listing.parking}</span>
                 </div>
