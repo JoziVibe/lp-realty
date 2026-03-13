@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Section } from "../layout/Section";
+import { ArrowUpRight } from "lucide-react";
 
 export function Cta() {
     return (
@@ -20,6 +21,7 @@ export function Cta() {
                     </p>
                     <Button size="lg" className="mt-8 font-semibold px-8 py-6 rounded-full text-base">
                         Join Now
+                        <ArrowUpRight />
                     </Button>
                 </div>
             </div>

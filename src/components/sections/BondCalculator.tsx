@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Section } from '../layout/Section';
 import { formatCurrency, cn } from '@/lib/utils';
 import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 
 export function BondCalculator() {
   const [purchasePrice, setPurchasePrice] = useState(2500000);
@@ -175,6 +176,7 @@ export function BondCalculator() {
 
                <Button className="w-full mt-10 h-12 rounded-full bg-white text-[#003f47] hover:bg-white/90 font-semibold text-base shadow-lg transition-all hover:scale-[1.02]">
                   Apply for Pre-qualification
+                  <ArrowUpRight />
                 </Button>
             </div>
           </CardContent>

@@ -2,6 +2,7 @@ import { listings } from '@/lib/data';
 import { Section } from '../layout/Section';
 import { Button } from '../ui/button';
 import { HorizontalScrollCarousel } from '../ui/horizontal-scroll-carousel';
+import { ArrowUpRight } from 'lucide-react';
 
 export function FeaturedListings() {
   const featuredListings = listings.filter(l => l.isFeatured);
@@ -15,7 +16,10 @@ export function FeaturedListings() {
             Find the best properties and luxurious houses that are available for sale.
           </p>
         </div>
-        <Button variant="outline" className="bg-background rounded-full px-6 flex-shrink-0">View All Properties</Button>
+        <Button variant="outline" className="bg-background rounded-full px-6 flex-shrink-0">
+          View All Properties
+          <ArrowUpRight />
+        </Button>
       </div>
       <HorizontalScrollCarousel listings={featuredListings} />
     </Section>

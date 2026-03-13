@@ -7,6 +7,7 @@ import {
 import { Section } from "../layout/Section"
 import { Button } from "../ui/button"
 import Image from "next/image"
+import { ArrowUpRight } from "lucide-react"
   
 const faqItems = [
     {
@@ -81,7 +82,10 @@ export function Faq() {
                             Can't find the answer you're looking for? Our team is here to help. Get in touch with us today for a personalized consultation.
                         </p>
                         <Button asChild className="mt-6 w-full rounded-full">
-                          <a href="#">Contact Us</a>
+                          <a href="#">
+                            Contact Us
+                            <ArrowUpRight />
+                          </a>
                         </Button>
                     </div>
                 </div>
