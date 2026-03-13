@@ -1,6 +1,5 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -25,18 +24,27 @@ export function PropertySearchForm() {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-10 items-center gap-2">
             <FormField
-            control={form.control}
-            name="location"
-            render={({ field }) => (
-                <FormItem className="md:col-span-5">
-                    <FormControl>
-                        <div className="relative">
-                            <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                            <Input {...field} placeholder="Enter a location..." className="h-12 text-base pl-12 bg-white rounded-full border-0 focus-visible:ring-offset-0 focus-visible:ring-2" />
-                        </div>
-                    </FormControl>
-                </FormItem>
-            )}
+                control={form.control}
+                name="location"
+                render={({ field }) => (
+                    <FormItem className="md:col-span-5">
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                                <SelectTrigger className="h-12 text-base bg-white rounded-full border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
+                                    <div className="flex items-center gap-2">
+                                        <MapPin className="h-5 w-5 text-muted-foreground" />
+                                        <SelectValue placeholder="Select a location" />
+                                    </div>
+                                </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                                <SelectItem value="cape-town">Cape Town & Surrounds</SelectItem>
+                                <SelectItem value="johannesburg">Johannesburg & Surrounds</SelectItem>
+                                <SelectItem value="lucky">I'm feeling Lucky</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </FormItem>
+                )}
             />
           
             <FormField
