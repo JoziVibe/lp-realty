@@ -9,7 +9,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { MapPin, Home, DollarSign, Search } from "lucide-react";
+import { MapPin, Home, Tag, Search } from "lucide-react";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 
@@ -73,7 +73,7 @@ export function PropertySearchForm() {
                             <FormControl>
                                 <SelectTrigger className="h-12 text-base bg-white rounded-full border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
                                      <div className="flex items-center gap-2">
-                                        <DollarSign className="h-5 w-5 text-muted-foreground" />
+                                        <Tag className="h-5 w-5 text-muted-foreground" />
                                         <SelectValue placeholder="Price" />
                                     </div>
                                 </SelectTrigger>
