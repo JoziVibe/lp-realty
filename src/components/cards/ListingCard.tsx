@@ -36,7 +36,7 @@ export function ListingCard({ listing }: ListingCardProps) {
       <div className="absolute inset-0 p-6 text-white flex flex-col justify-end">
           <div>
               <h3 className="text-2xl font-bold">{formatCurrency(listing.price)}</h3>
-              <p className="text-lg font-serif font-medium mt-1">{listing.title}</p>
+              <p className="text-lg font-serif font-medium mt-1 text-primary">{listing.title}</p>
               <p className="text-sm text-gray-300 mt-2">
                   {listing.suburb}, {listing.city}
               </p>
