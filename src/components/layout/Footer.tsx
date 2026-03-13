@@ -1,81 +1,120 @@
-import Link from 'next/link';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 
-export function Footer() {
-  const footerLinks = {
-    'SUPPORT': [
-      { label: 'Contact', href: '#' },
-      { label: 'FAQ', href: '#' },
-      { label: 'Downloads', href: '#' },
-      { label: 'Locate a dealer', href: '#' },
-      { label: 'Product registration', href: '#' },
-      { label: 'Spare parts', href: '#' },
-    ],
-    'RESIDENCE': [
-      { label: 'About', href: '#' },
-      { label: 'Jobs', href: '#' },
-      { label: 'Press', href: '#' },
-      { label: 'Sustainability', href: '#' },
-      { label: 'Blog', href: '#' },
-    ],
-  };
-  
-  const socialLinks = [
-    { Icon: Facebook, href: '#', name: 'Facebook' },
-    { Icon: Instagram, href: '#', name: 'Instagram' },
-    { Icon: Twitter, href: '#', name: 'Twitter' },
-    { Icon: Linkedin, href: '#', name: 'LinkedIn' },
-  ];
+type FooterProps = React.ComponentProps<'footer'> & {
+	children: React.ReactNode;
+};
 
-  return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <div className="container py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-5">
-            <h3 className="font-serif font-medium text-xl text-foreground">Discover Nature's Wonders with Expert Guidance</h3>
-            <p className="mt-4 text-muted-foreground">
-              Sign up for our newsletter to get the latest news, updates, and offers.
-            </p>
-            <div className="flex gap-2 mt-6">
-              <Input placeholder="Enter your email" className="bg-background"/>
-              <Button className="bg-[#003f47] text-white hover:bg-[#003f47]/90">Subscribe</Button>
-            </div>
-             <div className="flex gap-4 mt-6">
-              {socialLinks.map(({ Icon, href, name }) => (
-                <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Icon className="h-5 w-5" />
-                  <span className="sr-only">{name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
-            {Object.entries(footerLinks).map(([title, links]) => (
-              <div key={title}>
-                <h3 className="font-serif font-medium uppercase tracking-wider text-sm text-foreground">{title}</h3>
-                <ul className="mt-4 space-y-3">
-                  {links.map(({ label, href }) => (
-                    <li key={label}>
-                      <Link href={href} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="mt-16 border-t pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Residence. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-foreground">Privacy Policy</Link>
-            <Link href="#" className="hover:text-foreground">Terms of Service</Link>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
+	return (
+		<footer
+			className={cn(
+				'border-t bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]',
+				className,
+			)}
+			{...props}
+		>
+			<div className="relative mx-auto max-w-5xl px-4">
+				<div className="relative grid grid-cols-1 border-x md:grid-cols-4 md:divide-x">
+					<div>
+						<SocialCard title="Facebook" href="#" />
+						<LinksGroup
+							title="About Us"
+							links={[
+								{ title: 'Pricing', href: '#' },
+								{ title: 'Testimonials', href: '#' },
+								{ title: 'FAQs', href: '#' },
+								{ title: 'Contact Us', href: '#' },
+								{ title: 'Blog', href: '#' },
+							]}
+						/>
+					</div>
+					<div>
+						<SocialCard title="Youtube" href="#" />
+						<LinksGroup
+							title="Support"
+							links={[
+								{ title: 'Help Center', href: '#' },
+								{ title: 'Terms', href: '#' },
+								{ title: 'Privacy', href: '#' },
+								{ title: 'Security', href: '#' },
+								{ title: 'Cookie Policy', href: '#' },
+							]}
+						/>
+					</div>
+
+					<div>
+						<SocialCard title="Twitter" href="#" />
+						<LinksGroup
+							title="Community"
+							links={[
+								{ title: 'Forum', href: '#' },
+								{ title: 'Events', href: '#' },
+								{ title: 'Partners', href: '#' },
+								{ title: 'Affiliates', href: '#' },
+								{ title: 'Career', href: '#' },
+							]}
+						/>
+					</div>
+					<div>
+						<SocialCard title="Instagram" href="#" />
+						<LinksGroup
+							title="Press"
+							links={[
+								{ title: 'Investors', href: '#' },
+								{ title: 'Terms of Use', href: '#' },
+								{ title: 'Privacy Policy', href: '#' },
+								{ title: 'Cookie Policy', href: '#' },
+								{ title: 'Legal', href: '#' },
+							]}
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="flex justify-center border-t p-3">
+				<p className="text-muted-foreground text-xs">
+					© {new Date().getFullYear()} Residence. All rights reserved.
+				</p>
+			</div>
+		</footer>
+	);
+}
+
+interface LinksGroupProps {
+	title: string;
+	links: { title: string; href: string }[];
+}
+function LinksGroup({ title, links }: LinksGroupProps) {
+	return (
+		<div className="p-2">
+			<h3 className="text-foreground/75 mt-2 mb-4 text-xs font-medium tracking-wider uppercase">
+				{title}
+			</h3>
+			<ul>
+				{links.map((link) => (
+					<li key={link.title}>
+						<a
+							href={link.href}
+							className="text-muted-foreground hover:text-foreground text-xs"
+						>
+							{link.title}
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
+}
+
+function SocialCard({ title, href }: { title: string; href: string }) {
+	return (
+		<a
+			href={href}
+			className="hover:bg-accent hover:text-accent-foreground flex items-center justify-between border-t border-b p-2 text-sm md:border-t-0"
+		>
+			<span className="font-medium">{title}</span>
+			<ArrowRight className="h-4 w-4 transition-colors" />
+		</a>
+	);
 }
