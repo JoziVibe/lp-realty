@@ -16,7 +16,7 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 			{...props}
 		>
 			<div className="relative container">
-				<div className="relative grid grid-cols-1 border-x md:grid-cols-4 md:divide-x">
+				<div className="relative grid grid-cols-1 md:grid-cols-4 md:divide-x">
 					<div>
 						<SocialCard title="Facebook" href="#" />
 						<LinksGroup
