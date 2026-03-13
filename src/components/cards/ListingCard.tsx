@@ -50,15 +50,15 @@ export function ListingCard({ listing }: ListingCardProps) {
             </div>
 
             <div className="mt-4 flex items-center gap-2">
-                <div className="flex items-center gap-1.5 bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-xs text-[#003f47]">
+                <div className="flex items-center gap-1.5 bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-xs text-white">
                     <Bed className="w-4 h-4" />
                     <span>{listing.bedrooms}</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-xs text-[#003f47]">
+                <div className="flex items-center gap-1.5 bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-xs text-white">
                     <Bath className="w-4 h-4" />
                     <span>{listing.bathrooms}</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-xs text-[#003f47]">
+                <div className="flex items-center gap-1.5 bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-xs text-white">
                     <Car className="w-4 h-4" />
                     <span>{listing.parking}</span>
                 </div>
