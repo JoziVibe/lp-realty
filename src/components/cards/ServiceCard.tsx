@@ -28,7 +28,7 @@ export function ServiceCard({ title, imageUrl, imageHint, href }: ServiceCardPro
             className="text-3xl font-serif font-medium text-foreground"
             dangerouslySetInnerHTML={{ __html: title }}
           />
-          <div className="h-10 w-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#003f47] flex-shrink-0">
+          <div className="h-10 w-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-primary flex-shrink-0">
             <ArrowUpRight className="w-5 h-5" />
           </div>
         </div>
