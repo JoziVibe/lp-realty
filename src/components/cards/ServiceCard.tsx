@@ -25,7 +25,7 @@ export function ServiceCard({ title, imageUrl, imageHint, href }: ServiceCardPro
       <div className="absolute inset-x-0 bottom-0 p-4">
         <div className="bg-card/30 backdrop-blur-lg rounded-xl p-6 flex items-center justify-between">
           <h3
-            className="text-xl font-serif font-medium text-primary"
+            className="text-3xl font-serif font-medium text-foreground"
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <div className="h-10 w-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#003f47] flex-shrink-0">
