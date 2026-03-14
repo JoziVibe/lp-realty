@@ -24,7 +24,7 @@ const services = [
 
 export function Services() {
   return (
-    <Section id="services" className="bg-secondary">
+    <Section id="services">
       <div className="text-center max-w-2xl mx-auto mb-12">
         <h2 className="text-4xl font-medium text-foreground">Comprehensive Real Estate Services</h2>
         <p className="mt-2 text-lg text-muted-foreground">
