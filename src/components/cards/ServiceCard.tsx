@@ -23,7 +23,7 @@ export function ServiceCard({ title, imageUrl, imageHint, href }: ServiceCardPro
         data-ai-hint={imageHint}
       />
       <div className="absolute inset-x-0 bottom-0 p-4">
-        <div className="bg-card/70 backdrop-blur-lg rounded-xl p-6 flex items-center justify-between">
+        <div className="bg-card/30 backdrop-blur-lg rounded-xl p-6 flex items-center justify-between">
           <h3
             className="text-xl font-semibold text-card-foreground"
             dangerouslySetInnerHTML={{ __html: title }}
