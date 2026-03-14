@@ -37,7 +37,7 @@ export function PropertySearchForm() {
                                     </div>
                                 </SelectTrigger>
                             </FormControl>
-                            <SelectContent>
+                            <SelectContent className="bg-white/80 backdrop-blur-xl border-white/40 shadow-xl">
                                 <SelectItem value="cape-town">Cape Town & Surrounds</SelectItem>
                                 <SelectItem value="johannesburg">Johannesburg & Surrounds</SelectItem>
                                 <SelectItem value="lucky">I'm feeling Lucky</SelectItem>
@@ -61,11 +61,11 @@ export function PropertySearchForm() {
                                     </div>
                                 </SelectTrigger>
                             </FormControl>
-                            <SelectContent>
+                            <SelectContent className="bg-white/80 backdrop-blur-xl border-white/40 shadow-xl">
                                 <SelectItem value="any">Any Type</SelectItem>
                                 <SelectItem value="house">House</SelectItem>
                                 <SelectItem value="apartment">Apartment</SelectItem>
-                                <SelectItem value="condo">Condo</SelectItem>
+                                <SelectItem value="cluster">Cluster</SelectItem>
                             </SelectContent>
                         </Select>
                     </FormItem>
@@ -86,12 +86,14 @@ export function PropertySearchForm() {
                                     </div>
                                 </SelectTrigger>
                             </FormControl>
-                            <SelectContent>
+                            <SelectContent className="bg-white/80 backdrop-blur-xl border-white/40 shadow-xl">
                                 <SelectItem value="any">Any Price</SelectItem>
-                                <SelectItem value="<500k">&lt; R500k</SelectItem>
-                                <SelectItem value="500k-1m">R500k - R1M</SelectItem>
-                                <SelectItem value="1m-2m">R1M - R2M</SelectItem>
-                                <SelectItem value=">2m">&gt; R2M</SelectItem>
+                                <SelectItem value="<2m">Below R2M</SelectItem>
+                                <SelectItem value="2m-3m">R2M - R3M</SelectItem>
+                                <SelectItem value="3m-5m">R3M - R5M</SelectItem>
+                                <SelectItem value="5m-8m">R5M - R8M</SelectItem>
+                                <SelectItem value="8m-15m">R8M - R15M</SelectItem>
+                                <SelectItem value=">15m">Over R15M</SelectItem>
                             </SelectContent>
                         </Select>
                     </FormItem>

@@ -20,53 +20,53 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 					<div>
 						<SocialCard title="Facebook" href="#" />
 						<LinksGroup
-							title="About Us"
+							title="Company"
 							links={[
-								{ title: 'Pricing', href: '#' },
-								{ title: 'Testimonials', href: '#' },
-								{ title: 'FAQs', href: '#' },
+								{ title: 'Home', href: '#' },
+								{ title: 'About', href: '#' },
+								{ title: 'Properties', href: '#' },
 								{ title: 'Contact Us', href: '#' },
-								{ title: 'Blog', href: '#' },
+								{ title: 'Sell Your Home', href: '#' },
 							]}
 						/>
 					</div>
 					<div>
 						<SocialCard title="Youtube" href="#" />
 						<LinksGroup
-							title="Support"
+							title="Properties"
 							links={[
-								{ title: 'Help Center', href: '#' },
-								{ title: 'Terms', href: '#' },
-								{ title: 'Privacy', href: '#' },
-								{ title: 'Security', href: '#' },
-								{ title: 'Cookie Policy', href: '#' },
+								{ title: 'Johannesburg', href: '#' },
+								{ title: 'Cape Town', href: '#' },
+								{ title: 'Knysna', href: '#' },
+								{ title: 'Hartbeespoort', href: '#' },
+								{ title: 'Paarl', href: '#' },
 							]}
 						/>
 					</div>
 
 					<div>
-						<SocialCard title="Twitter" href="#" />
+						<SocialCard title="TikTok" href="#" />
 						<LinksGroup
-							title="Community"
+							title="Services"
 							links={[
-								{ title: 'Forum', href: '#' },
+								{ title: 'Media', href: '#' },
+								{ title: 'Sales', href: '#' },
+								{ title: 'Brokerage', href: '#' },
 								{ title: 'Events', href: '#' },
-								{ title: 'Partners', href: '#' },
-								{ title: 'Affiliates', href: '#' },
-								{ title: 'Career', href: '#' },
+								{ title: 'Listings', href: '#' },
 							]}
 						/>
 					</div>
 					<div>
 						<SocialCard title="Instagram" href="#" />
 						<LinksGroup
-							title="Press"
+							title="Legal"
 							links={[
-								{ title: 'Investors', href: '#' },
+								{ title: 'Cookie Policy', href: '#' },
 								{ title: 'Terms of Use', href: '#' },
 								{ title: 'Privacy Policy', href: '#' },
-								{ title: 'Cookie Policy', href: '#' },
-								{ title: 'Legal', href: '#' },
+								{ title: 'POPIA', href: '#' },
+								{ title: 'IEASA', href: '#' },
 							]}
 						/>
 					</div>

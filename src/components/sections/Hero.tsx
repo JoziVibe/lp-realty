@@ -20,8 +20,8 @@ const MARQUEE_IMAGES = [
 export function Hero() {
   return (
     <AnimatedMarqueeHero
-      tagline="Over 200,000+ properties sold"
-      title={<>Where Luxury Homes Find <span className="italic text-primary">Their People.</span></>}
+      tagline="South Africa's Premier Real Estate Agency."
+      title={<>Where Luxury Homes Meet <span className="italic text-primary">Their Audience.</span></>}
       description="We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over R1 billion in deals."
       images={MARQUEE_IMAGES}
     />

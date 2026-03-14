@@ -15,14 +15,20 @@ export function Cta() {
                     data-ai-hint="modern house exterior"
                 />
                 <div className="relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-medium">Ready to Make Your Dream<br />Property a Reality?</h2>
+                    <h2 className="text-4xl md:text-5xl font-medium">Your Next Move Starts Here.</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
-                        Explore our listings, connect with our agents, and find the perfect property that exceeds your expectations.
+                    Whether you're buying your first home, selling your most valuable asset, or building a property portfolio — LP Realty brings the market expertise and media reach to make it happen. Let's talk.
                     </p>
-                    <Button size="lg" className="mt-8 font-semibold px-8 py-6 rounded-full text-base">
-                        Join Now
-                        <ArrowUpRight />
-                    </Button>
+                    <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Button size="lg" className="font-semibold px-8 py-6 rounded-full text-base w-full sm:w-auto">
+                            Buy A Home
+                            <ArrowUpRight />
+                        </Button>
+                        <Button size="lg" variant="outline" className="font-semibold px-8 py-6 rounded-full text-base w-full sm:w-auto bg-transparent border-white/40 hover:bg-white/10 text-white hover:text-[#EC9040]">
+                            List Your Home
+                            <ArrowUpRight />
+                        </Button>
+                    </div>
                 </div>
             </div>
         </Section>

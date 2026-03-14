@@ -16,6 +16,9 @@ const config = {
       },
     },
     extend: {
+      maxWidth: {
+        container: "1280px",
+      },
       fontFamily: {
         sans: ['var(--font-inter)'],
         serif: ['var(--font-instrument-serif)'],
