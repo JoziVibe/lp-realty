@@ -32,7 +32,7 @@ export function ServiceCard({ title, videoUrl, imageHint, href }: ServiceCardPro
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <div className="h-10 w-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-primary flex-shrink-0">
-            <ArrowUpRight className="w-5 h-5" />
+            <ArrowUpRight className="w-5 h-5 text-primary" />
           </div>
         </div>
       </div>
