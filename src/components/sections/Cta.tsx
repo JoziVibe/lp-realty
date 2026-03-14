@@ -1,19 +1,29 @@
+'use client';
+
+import { useRef } from 'react';
 import Image from "next/image";
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from "../ui/button";
 import { Section } from "../layout/Section";
 import { ArrowUpRight } from "lucide-react";
 
 export function Cta() {
+    const sectionRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+    const imageY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+
     return (
-        <Section removePadding>
+        <Section ref={sectionRef} removePadding>
             <div className="relative container bg-gray-900 rounded-2xl text-white py-20 px-8 text-center overflow-hidden">
-                <Image
-                    src="/background/CTA BG.jpg"
-                    alt="Modern house"
-                    fill
-                    className="object-cover opacity-30"
-                    data-ai-hint="modern house exterior"
-                />
+                <motion.div style={{ y: imageY }} className="absolute inset-0">
+                    <Image
+                        src="/background/CTA BG.jpg"
+                        alt="Modern house"
+                        fill
+                        className="object-cover opacity-30"
+                        data-ai-hint="modern house exterior"
+                    />
+                </motion.div>
                 <div className="relative z-10">
                     <h2 className="text-4xl md:text-5xl font-medium">Your Next Move Starts Here.</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">

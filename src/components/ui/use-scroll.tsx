@@ -1,22 +1,15 @@
 'use client';
-import React from 'react';
 
-export function useScroll(threshold: number) {
-	const [scrolled, setScrolled] = React.useState(false);
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 
-	const onScroll = React.useCallback(() => {
-		setScrolled(window.scrollY > threshold);
-	}, [threshold]);
+export const useScrollTrigger = (threshold = 0.1) => {
+  const { scrollY } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-	React.useEffect(() => {
-		window.addEventListener('scroll', onScroll);
-		return () => window.removeEventListener('scroll', onScroll);
-	}, [onScroll]);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > threshold);
+  });
 
-	// also check on first load
-	React.useEffect(() => {
-		onScroll();
-	}, [onScroll]);
-
-	return scrolled;
-}
+  return isScrolled;
+};

@@ -5,12 +5,12 @@ import Image from 'next/image';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { MenuToggleIcon } from '@/components/ui/menu-toggle-icon';
-import { useScroll } from '@/components/ui/use-scroll';
+import { useScrollTrigger } from '@/components/ui/use-scroll';
 import { ArrowUpRight } from 'lucide-react';
 
 export function Header() {
 	const [open, setOpen] = React.useState(false);
-	const scrolled = useScroll(10);
+	const scrolled = useScrollTrigger(10);
 
 	const links = [
 		{

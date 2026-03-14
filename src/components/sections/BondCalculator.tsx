@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -16,6 +17,10 @@ export function BondCalculator() {
   const [deposit, setDeposit] = useState(250000);
   const [interestRate, setInterestRate] = useState(11.75);
   const [loanTerm, setLoanTerm] = useState(20);
+
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
   const loanAmount = useMemo(() => purchasePrice - deposit, [purchasePrice, deposit]);
   
@@ -48,14 +53,16 @@ export function BondCalculator() {
   };
 
   return (
-    <Section removePadding className="relative text-white overflow-hidden">
-      <Image
-        src="/background/Bond Calculator BG.jpg"
-        alt="A beautiful view of Cape Town"
-        fill
-        className="object-cover"
-        data-ai-hint="Cape Town"
-      />
+    <Section ref={sectionRef} removePadding className="relative text-white overflow-hidden">
+      <motion.div style={{ y: imageY }} className="absolute inset-0">
+        <Image
+          src="/background/Bond Calculator BG.jpg"
+          alt="A beautiful view of Cape Town"
+          fill
+          className="object-cover"
+          data-ai-hint="Cape Town"
+        />
+      </motion.div>
       <div className="absolute inset-0 bg-[#003f47]/60" />
       
       <div className="container relative py-16 lg:py-24 z-10">
