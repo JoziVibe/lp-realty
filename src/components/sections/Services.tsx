@@ -3,21 +3,21 @@ import { ServiceCard } from '../cards/ServiceCard';
 
 const services = [
   {
-    title: 'Expert Buyer Representation',
+    title: 'Expert Buyer <br> Representation',
     imageUrl: 'https://picsum.photos/seed/buyer-rep/600/800',
     imageHint: 'suburban house',
     href: '#',
   },
   {
-    title: 'Seamless Seller Representation',
+    title: 'Seamless Seller <br> Representation',
     imageUrl: 'https://picsum.photos/seed/seller-rep/600/800',
     imageHint: 'modern white house',
     href: '#',
   },
   {
-    title: 'Tailored Rent Services',
-    imageUrl: 'https://picsum.photos/seed/rent-services/600/800',
-    imageHint: 'brick house suburbs',
+    title: 'Tailored Media <br> Production',
+    imageUrl: 'https://picsum.photos/seed/media-prod/600/800',
+    imageHint: 'video production',
     href: '#',
   },
 ];
