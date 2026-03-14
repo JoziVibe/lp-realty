@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
 import { Inter, Instrument_Serif } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { FloatingChatButton } from '@/components/ui/FloatingChatButton';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Toaster />
+        <FloatingChatButton />
       </body>
     </html>
   );
