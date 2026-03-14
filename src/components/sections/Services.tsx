@@ -4,19 +4,19 @@ import { ServiceCard } from '../cards/ServiceCard';
 const services = [
   {
     title: 'Expert Buyer <br> Representation',
-    videoUrl: '/service/Expert Buyer Representation.mp4',
+    videoUrl: '/service/Buyer Vid.mp4',
     imageHint: 'suburban house',
     href: '#',
   },
   {
     title: 'Seamless Seller <br> Representation',
-    videoUrl: '/service/Seamless Seller Representation.mp4',
+    videoUrl: '/service/Seller Vid.mp4',
     imageHint: 'modern white house',
     href: '#',
   },
   {
     title: 'Tailored Media <br> Production',
-    videoUrl: '/service/Tailored Media Production.mp4',
+    videoUrl: '/service/Media Vid.mp4',
     imageHint: 'video production',
     href: '#',
   },
