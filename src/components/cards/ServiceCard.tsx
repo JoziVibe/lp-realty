@@ -1,27 +1,30 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
-  imageUrl: string;
+  videoUrl: string;
   imageHint: string;
   href: string;
 }
 
-export function ServiceCard({ title, imageUrl, imageHint, href }: ServiceCardProps) {
+export function ServiceCard({ title, videoUrl, imageHint, href }: ServiceCardProps) {
   const plainTitle = title.replace(/<br\s*\/?>/g, ' ');
 
   return (
     <Link href={href} className="block group relative h-[500px] rounded-2xl overflow-hidden shadow-lg">
-      <Image
-        src={imageUrl}
-        alt={plainTitle}
-        fill
-        className="object-cover group-hover:scale-105 transition-transform duration-300"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+      <video
+        src={videoUrl}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         data-ai-hint={imageHint}
-      />
+        aria-label={plainTitle}
+      >
+          Your browser does not support the video tag.
+      </video>
       <div className="absolute inset-x-0 bottom-0 p-4">
         <div className="bg-card/30 backdrop-blur-lg rounded-xl p-6 flex items-center justify-between">
           <h3

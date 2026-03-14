@@ -4,19 +4,19 @@ import { ServiceCard } from '../cards/ServiceCard';
 const services = [
   {
     title: 'Expert Buyer <br> Representation',
-    imageUrl: 'https://picsum.photos/seed/buyer-rep/600/800',
+    videoUrl: '/service/Expert Buyer Representation.mp4',
     imageHint: 'suburban house',
     href: '#',
   },
   {
     title: 'Seamless Seller <br> Representation',
-    imageUrl: 'https://picsum.photos/seed/seller-rep/600/800',
+    videoUrl: '/service/Seamless Seller Representation.mp4',
     imageHint: 'modern white house',
     href: '#',
   },
   {
     title: 'Tailored Media <br> Production',
-    imageUrl: 'https://picsum.photos/seed/media-prod/600/800',
+    videoUrl: '/service/Tailored Media Production.mp4',
     imageHint: 'video production',
     href: '#',
   },
