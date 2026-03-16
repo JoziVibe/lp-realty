@@ -46,7 +46,7 @@ const features = [
   },
 ];
 
-const rotatingWords = ["Seller", "Buyer"];
+const rotatingWords = ["Offer", "Buyer"];
 const TYPING_SPEED = 120;
 const DELETING_SPEED = 80;
 const PAUSE_DURATION = 2000;
