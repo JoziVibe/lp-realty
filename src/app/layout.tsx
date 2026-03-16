@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/ui/header-2';
 import { Footer } from '@/components/layout/Footer';
@@ -24,10 +24,6 @@ export const metadata: Metadata = {
   description: "We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over R1 billion in deals.",
 };
 
-export const viewport: Viewport = {
-  themeColor: '#ffffff',
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("scroll-smooth", inter.variable, instrument_serif.variable)}>
+      <head>
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body className={cn("antialiased font-sans")}>
         <Header />
         <main>{children}</main>
