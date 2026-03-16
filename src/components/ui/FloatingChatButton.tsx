@@ -2,60 +2,61 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, ChevronLeft } from 'lucide-react';
+import { MessageSquare, X } from 'lucide-react';
+import { Chatbot } from './Chatbot';
 
 export function FloatingChatButton() {
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-
-  if (!isVisible) {
-    return null;
-  }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <AnimatePresence>
-        {isChatOpen ? (
-          // Chat is open, show a close button
-          <motion.button
-            key="close-btn"
-            onClick={() => setIsChatOpen(false)}
-            className="w-16 h-16 rounded-full bg-[#EC9040] flex items-center justify-center shadow-lg"
-            initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
-            whileHover={{ scale: 1.1, rotate: 90 }}
-            transition={{ duration: 0.3 }}
-          >
-            <X className="w-8 h-8 text-black" />
-          </motion.button>
-        ) : (
-          // Chat is closed, show the launcher
-          <motion.div
-            key="launcher"
-            className="w-28 h-16 rounded-full bg-[#003f47] flex items-center justify-between pl-2 pr-1 relative shadow-xl"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 0.3 }}
-          >
+    <>
+      <div className="fixed bottom-6 right-6 z-50">
+        <AnimatePresence>
+          {!isChatOpen && (
             <motion.button
-              onClick={() => setIsVisible(false)}
-              whileHover={{ scale: 1.2, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-              className="w-10 h-10 rounded-full flex items-center justify-center"
-            >
-              <ChevronLeft className="w-6 h-6 text-white" />
-            </motion.button>
-            <motion.button
+              key="launcher"
               onClick={() => setIsChatOpen(true)}
-              className="w-14 h-14 rounded-full bg-[#EC9040] flex items-center justify-center"
+              className="w-16 h-16 rounded-full bg-[#003f47] flex items-center justify-center shadow-xl text-white"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.5 }}
               whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+              aria-label="Open chat"
             >
-              <MessageSquare className="w-7 h-7 text-black" />
+              <MessageSquare className="w-8 h-8" />
             </motion.button>
+          )}
+        </AnimatePresence>
+      </div>
+
+      <AnimatePresence>
+        {isChatOpen && (
+          <motion.div
+            key="chat-window"
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed bottom-6 right-6 z-50 w-[90vw] max-w-sm h-[70vh] max-h-[550px] bg-card rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+          >
+            <div className="flex items-center justify-between p-3 border-b bg-card">
+                <h3 className="font-serif font-medium text-lg pl-2">LP Realty Assistant</h3>
+                <motion.button
+                    onClick={() => setIsChatOpen(false)}
+                    className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-secondary"
+                    whileHover={{ scale: 1.1, rotate: 90 }}
+                    aria-label="Close chat"
+                >
+                    <X className="w-5 h-5 text-muted-foreground" />
+                </motion.button>
+            </div>
+            <div className="flex-1">
+                <Chatbot />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }
