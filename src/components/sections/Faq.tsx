@@ -46,28 +46,28 @@ const faqItems = [
   
 export function Faq() {
     return (
-      <Section>
+      <Section className="pb-24">
         <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-4xl font-medium text-foreground">Frequently asked <span className="italic text-primary">questions</span></h2>
             <p className="mt-4 text-lg text-muted-foreground">
                 Our experts provide comprehensive answers to your most pressing questions about real estate.
             </p>
         </div>
-        <div className="grid lg:grid-cols-3 gap-12 mt-12 max-w-7xl mx-auto items-start">
+        <div className="grid lg:grid-cols-3 gap-0 md:gap-12 mt-8 md:mt-12 max-w-7xl mx-auto items-start">
             <div className="lg:col-span-2">
                 <Accordion type="single" defaultValue="item-0" collapsible className="w-full">
                     {faqItems.map((item, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
-                            <AccordionTrigger className="text-lg font-semibold text-left">{item.question}</AccordionTrigger>
-                            <AccordionContent className="text-base text-muted-foreground">
+                            <AccordionTrigger className="text-[14px] md:text-lg font-semibold text-left">{item.question}</AccordionTrigger>
+                            <AccordionContent className="text-[12px] md:text-base text-muted-foreground">
                                 {item.answer}
                             </AccordionContent>
                         </AccordionItem>
                     ))}
                 </Accordion>
             </div>
-            <div className="lg:col-span-1">
-                <div className="relative rounded-2xl h-fit sticky top-24 overflow-hidden text-white">
+            <div className="lg:col-span-1 h-full pb-8 md:pb-0">
+                <div className="relative rounded-2xl h-fit md:sticky top-2 overflow-hidden text-white mt-12 md:mt-0">
                     <Image
                         src="/background/FAQs CTA BG.jpg"
                         alt="Person on a call"
@@ -76,15 +76,15 @@ export function Faq() {
                         data-ai-hint="customer service representative"
                     />
                     <div className="absolute inset-0 bg-[#003f47]/90" />
-                    <div className="relative p-12 flex flex-col">
+                    <div className="relative p-8 md:p-12 flex flex-col">
                         <h3 className="text-2xl font-serif font-medium">Still have questions?</h3>
                         <p className="mt-2 text-gray-200">
                             Can't find the answer you're looking for? Our team is here to help. Get in touch with us today for a personalized consultation.
                         </p>
-                        <Button asChild className="mt-6 w-full rounded-full">
+                        <Button asChild className="mt-6 w-full rounded-full bg-[#EC9040] hover:bg-[#EC9040]/90 text-white border-0">
                           <a href="#">
                             Contact Us
-                            <ArrowUpRight />
+                            <ArrowUpRight className="w-4 h-4 ml-2" />
                           </a>
                         </Button>
                     </div>

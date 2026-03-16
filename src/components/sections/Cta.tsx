@@ -14,7 +14,7 @@ export function Cta() {
 
     return (
         <Section ref={sectionRef} removePadding>
-            <div className="relative container bg-gray-900 rounded-2xl text-white py-20 px-8 text-center overflow-hidden">
+            <div className="relative container bg-gray-900 rounded-none md:rounded-2xl text-white py-20 px-8 text-center overflow-hidden">
                 <motion.div style={{ y: imageY }} className="absolute inset-0">
                     <Image
                         src="/background/CTA BG.jpg"

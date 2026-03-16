@@ -17,8 +17,18 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 		>
 			<div className="relative container px-0">
 				<div className="grid grid-cols-1 border-x md:grid-cols-4 md:divide-x">
+                    {/* Socials - Grouped together on Mobile, spread across tops of columns on Desktop */}
+                    <div className="md:hidden flex flex-col w-full">
+                        <SocialCard title="Facebook" href="https://www.facebook.com/LetsPropIn/" />
+                        <SocialCard title="Youtube" href="https://www.youtube.com/@LetsPropIn" />
+                        <SocialCard title="TikTok" href="https://www.tiktok.com/@letspropin" />
+                        <SocialCard title="Instagram" href="https://www.instagram.com/letspropin" />
+                    </div>
+
 					<div>
-						<SocialCard title="Facebook" href="https://www.facebook.com/LetsPropIn/" />
+						<div className="hidden md:block">
+                            <SocialCard title="Facebook" href="https://www.facebook.com/LetsPropIn/" />
+                        </div>
 						<LinksGroup
 							title="Company"
 							links={[
@@ -31,7 +41,9 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 						/>
 					</div>
 					<div>
-						<SocialCard title="Youtube" href="https://www.youtube.com/@LetsPropIn" />
+                        <div className="hidden md:block">
+						    <SocialCard title="Youtube" href="https://www.youtube.com/@LetsPropIn" />
+                        </div>
 						<LinksGroup
 							title="Properties"
 							links={[
@@ -45,7 +57,9 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 					</div>
 
 					<div>
-						<SocialCard title="TikTok" href="https://www.tiktok.com/@letspropin" />
+                        <div className="hidden md:block">
+						    <SocialCard title="TikTok" href="https://www.tiktok.com/@letspropin" />
+                        </div>
 						<LinksGroup
 							title="Legal"
 							links={[
@@ -58,8 +72,10 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 						/>
 					</div>
 					<div>
-						<SocialCard title="Instagram" href="https://www.instagram.com/letspropin" />
-						<div className="p-2">
+                        <div className="hidden md:block">
+						    <SocialCard title="Instagram" href="https://www.instagram.com/letspropin" />
+                        </div>
+						<div className="p-4 md:p-2 border-t md:border-t-0 border-border">
 							<h3 className="text-foreground/75 mt-2 mb-4 text-xs font-medium tracking-wider uppercase">
 								Contact Us
 							</h3>
@@ -89,16 +105,16 @@ interface LinksGroupProps {
 }
 function LinksGroup({ title, links }: LinksGroupProps) {
 	return (
-		<div className="p-2">
+		<div className="p-4 md:p-2 border-t md:border-t-0 border-border">
 			<h3 className="text-foreground/75 mt-2 mb-4 text-xs font-medium tracking-wider uppercase">
 				{title}
 			</h3>
-			<ul>
+			<ul className="space-y-2">
 				{links.map((link) => (
 					<li key={link.title}>
 						<a
 							href={link.href}
-							className="text-muted-foreground hover:text-foreground text-xs"
+							className="text-muted-foreground hover:text-foreground text-xs block py-1 md:py-0"
 						>
 							{link.title}
 						</a>
@@ -115,7 +131,7 @@ function SocialCard({ title, href }: { title: string; href: string }) {
 			href={href}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="hover:bg-accent hover:text-accent-foreground flex items-center justify-between border-t border-b p-2 text-sm md:border-t-0"
+			className="hover:bg-accent hover:text-accent-foreground flex items-center justify-between border-t border-border p-4 md:p-2 text-sm md:border-t-0 md:border-b"
 		>
 			<span className="font-medium">{title}</span>
 			<ArrowRight className="h-4 w-4 transition-colors" />

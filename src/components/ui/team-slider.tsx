@@ -170,8 +170,8 @@ export const TeamSlider = ({
                 <p className="text-sm font-medium text-primary">
                   {activeAgent.role}
                 </p>
-                <h3 className="text-3xl font-medium mt-1 font-serif">{activeAgent.name}</h3>
-                <blockquote className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                <h3 className="text-[24px] md:text-3xl font-medium mt-1 font-serif">{activeAgent.name}</h3>
+                <blockquote className="mt-6 text-[14px] md:text-lg text-muted-foreground leading-relaxed">
                   {activeAgent.bio}
                 </blockquote>
                 <a 

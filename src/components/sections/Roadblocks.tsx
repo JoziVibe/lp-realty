@@ -162,11 +162,11 @@ export function Roadblocks() {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 divide-dashed divide-border border-border border-t sm:grid-cols-2 sm:divide-x lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 divide-y md:divide-y-0 md:divide-x divide-dashed divide-border border-border border-t sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => {
             return (
               <div
-                className="flex flex-col gap-5 px-5 py-8 last:border-b-0 lg:border-b-0 lg:px-6 lg:py-10"
+                className="flex flex-col gap-5 px-5 py-8 last:border-b-0 lg:border-b-0 lg:px-6 lg:py-10 items-center text-center md:items-start md:text-left"
                 key={feature.title}
               >
                 <div className="relative size-16">
@@ -178,7 +178,7 @@ export function Roadblocks() {
                    />
                 </div>
 
-                <div className="flex flex-col gap-2 pt-10 lg:pt-20">
+                <div className="flex flex-col gap-2 pt-2 md:pt-10 lg:pt-20">
                   <h3 className="font-serif font-medium text-2xl tracking-tight sm:text-3xl text-foreground">
                     {feature.title}
                   </h3>

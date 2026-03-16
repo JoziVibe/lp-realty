@@ -53,7 +53,7 @@ export function BondCalculator() {
   };
 
   return (
-    <Section ref={sectionRef} removePadding className="relative text-white overflow-hidden">
+    <Section ref={sectionRef} removePadding className="relative text-white overflow-hidden px-4 md:px-0">
       <motion.div style={{ y: imageY }} className="absolute inset-0">
         <Image
           src="/background/Bond Calculator BG.jpg"
@@ -65,19 +65,19 @@ export function BondCalculator() {
       </motion.div>
       <div className="absolute inset-0 bg-[#003f47]/60" />
       
-      <div className="container relative py-16 lg:py-24 z-10">
+      <div className="container relative py-16 lg:py-24 z-10 px-0 md:px-8">
         <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-5xl font-medium">Bond <span className="italic text-primary">Calculator</span></h2>
-            <p className="mt-2 text-lg text-gray-200">
+            <h2 className="text-5xl font-medium font-serif">Bond <span className="italic text-[#EC9040]">Calculator</span></h2>
+            <p className="mt-4 text-lg text-gray-200 font-sans">
               Estimate your monthly bond repayments and see how different terms and interest rates could affect your affordability.
             </p>
         </div>
 
         <Card className={cn(
-            "mt-12 max-w-4xl mx-auto text-white",
+            "mt-8 md:mt-12 max-w-4xl mx-auto text-white",
             "bg-background/20 supports-[backdrop-filter]:bg-background/10 border-white/20 backdrop-blur-xl shadow-2xl rounded-2xl"
         )}>
-          <CardContent className="grid md:grid-cols-2 gap-8 p-8">
+          <CardContent className="grid md:grid-cols-2 gap-8 p-6 md:p-8">
             <div className="space-y-6">
               <div>
                 <Label htmlFor="purchase-price" className="font-semibold text-white">Purchase Price</Label>
@@ -123,7 +123,7 @@ export function BondCalculator() {
 
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="interest-rate" className="text-white">Interest Rate (%)</Label>
+                  <Label htmlFor="interest-rate" className="text-white text-xs sm:text-sm">Interest Rate (%)</Label>
                   <Input
                     id="interest-rate"
                     type="number"
@@ -142,7 +142,7 @@ export function BondCalculator() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="loan-term" className="text-white">Loan Term (Years)</Label>
+                  <Label htmlFor="loan-term" className="text-white text-xs sm:text-sm">Loan Term (Years)</Label>
                   <Input
                     id="loan-term"
                     type="number"
@@ -162,11 +162,11 @@ export function BondCalculator() {
               </div>
             </div>
 
-            <div className="bg-black/20 border border-white/10 rounded-xl p-8 flex flex-col justify-center backdrop-blur-md">
-              <p className="text-white/80 text-sm font-medium uppercase tracking-wider">Estimated Monthly Repayment</p>
-              <p className="text-5xl font-serif font-medium text-primary mt-3 drop-shadow-sm">{formatCurrency(monthlyRepayment)}</p>
+            <div className="bg-black/20 border border-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-center backdrop-blur-md mt-4 md:mt-0">
+              <p className="text-white/80 text-xs md:text-sm font-medium uppercase tracking-wider">Estimated Monthly Repayment</p>
+              <p className="text-4xl md:text-5xl font-serif font-medium text-[#EC9040] mt-2 md:mt-3 drop-shadow-sm">{formatCurrency(monthlyRepayment)}</p>
               
-              <div className="mt-10 space-y-4 text-sm">
+              <div className="mt-8 md:mt-10 space-y-4 text-xs md:text-sm">
                   <div className="flex justify-between items-center border-b border-white/10 pb-3">
                       <span className="text-white/70">Loan Amount</span>
                       <span className="font-semibold text-white">{formatCurrency(loanAmount)}</span>
@@ -181,9 +181,9 @@ export function BondCalculator() {
                   </div>
               </div>
 
-               <Button className="w-full mt-10 h-12 rounded-full bg-white text-[#003f47] hover:bg-white/90 font-semibold text-base shadow-lg transition-all hover:scale-[1.02]">
+               <Button className="w-full mt-8 md:mt-10 h-12 rounded-full bg-white text-[#003f47] hover:bg-white/90 font-semibold text-base shadow-lg transition-all hover:scale-[1.02]">
                   Apply for Pre-qualification
-                  <ArrowUpRight />
+                  <ArrowUpRight className="w-4 h-4 ml-2" />
                 </Button>
             </div>
           </CardContent>

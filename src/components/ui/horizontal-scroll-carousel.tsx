@@ -22,7 +22,7 @@ export const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> =
         align: "start",
         loop: true,
       }}
-      className="w-full"
+      className="w-full relative"
     >
       <CarouselContent className="-ml-4">
         {listings.map((listing) => (
@@ -33,8 +33,14 @@ export const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> =
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="flex justify-center gap-4 mt-6 md:hidden">
+         <CarouselPrevious className="static translate-x-0 translate-y-0" />
+         <CarouselNext className="static translate-x-0 translate-y-0" />
+      </div>
+      <div className="hidden md:block">
+        <CarouselPrevious className="-left-12" />
+        <CarouselNext className="-right-12" />
+      </div>
     </Carousel>
   )
 }
