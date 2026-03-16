@@ -4,7 +4,7 @@ import { Section } from "../layout/Section"
 import { Marquee } from "@/components/ui/marquee"
 
 interface TestimonialsSectionProps {
-  title: string
+  title: React.ReactNode
   description: string
   testimonials: Array<{
     author: TestimonialAuthor

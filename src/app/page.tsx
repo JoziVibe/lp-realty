@@ -54,7 +54,7 @@ export default function Home() {
       <Faq />
       <BondCalculator />
       <TestimonialsSection 
-        title="Trusted by South Africa's Premium Market"
+        title={<>Trusted by South Africa's <span className="italic">Premium Market</span></>}
         description="Join the hundreds of buyers and sellers who have experienced the LP Realty difference."
         testimonials={testimonials}
       />

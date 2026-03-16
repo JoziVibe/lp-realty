@@ -25,7 +25,7 @@ export function Cta() {
                     />
                 </motion.div>
                 <div className="relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-medium">Your Next Move Starts Here.</h2>
+                    <h2 className="text-4xl md:text-5xl font-medium">Your Next Move <span className="italic">Starts Here.</span></h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
                     Whether you're buying your first home, selling your most valuable asset, or building a property portfolio — LP Realty brings the market expertise and media reach to make it happen. Let's talk.
                     </p>
