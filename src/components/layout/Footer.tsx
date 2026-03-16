@@ -47,19 +47,6 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 					<div>
 						<SocialCard title="TikTok" href="https://www.tiktok.com/@letspropin" />
 						<LinksGroup
-							title="Services"
-							links={[
-								{ title: 'Media', href: '#' },
-								{ title: 'Sales', href: '#' },
-								{ title: 'Brokerage', href: '#' },
-								{ title: 'Events', href: '#' },
-								{ title: 'Listings', href: '#' },
-							]}
-						/>
-					</div>
-					<div>
-						<SocialCard title="Instagram" href="https://www.instagram.com/letspropin" />
-						<LinksGroup
 							title="Legal"
 							links={[
 								{ title: 'Cookie Policy', href: '#' },
@@ -69,6 +56,21 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 								{ title: 'IEASA', href: '#' },
 							]}
 						/>
+					</div>
+					<div>
+						<SocialCard title="Instagram" href="https://www.instagram.com/letspropin" />
+						<div className="p-2">
+							<h3 className="text-foreground/75 mt-2 mb-4 text-xs font-medium tracking-wider uppercase">
+								Contact Us
+							</h3>
+							<ul className="space-y-2 text-xs text-muted-foreground">
+								<li><a href="tel:+27833340078" className="hover:text-foreground">+27 83 334 0078</a></li>
+								<li><a href="mailto:Taylor@LPRealty.co.za" className="hover:text-foreground">Taylor@LPRealty.co.za</a></li>
+								<li><a href="mailto:Sibiya@LPRealty.co.za" className="hover:text-foreground">Sibiya@LPRealty.co.za</a></li>
+								<li className="pt-2">206 West Court, Sea Point, Cape Town.</li>
+								<li>Unit 1 Golfview, Eye of Africa Estate, Johannesburg</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
