@@ -18,7 +18,7 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 			<div className="relative container px-0">
 				<div className="grid grid-cols-1 border-x md:grid-cols-4 md:divide-x">
 					<div>
-						<SocialCard title="Facebook" href="#" />
+						<SocialCard title="Facebook" href="https://www.facebook.com/LetsPropIn/" />
 						<LinksGroup
 							title="Company"
 							links={[
@@ -31,7 +31,7 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 						/>
 					</div>
 					<div>
-						<SocialCard title="Youtube" href="#" />
+						<SocialCard title="Youtube" href="https://www.youtube.com/@LetsPropIn" />
 						<LinksGroup
 							title="Properties"
 							links={[
@@ -45,7 +45,7 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 					</div>
 
 					<div>
-						<SocialCard title="TikTok" href="#" />
+						<SocialCard title="TikTok" href="https://www.tiktok.com/@letspropin" />
 						<LinksGroup
 							title="Services"
 							links={[
@@ -58,7 +58,7 @@ export function Footer({ className, ...props }: Omit<FooterProps, 'children'>) {
 						/>
 					</div>
 					<div>
-						<SocialCard title="Instagram" href="#" />
+						<SocialCard title="Instagram" href="https://www.instagram.com/letspropin" />
 						<LinksGroup
 							title="Legal"
 							links={[
@@ -111,6 +111,8 @@ function SocialCard({ title, href }: { title: string; href: string }) {
 	return (
 		<a
 			href={href}
+			target="_blank"
+			rel="noopener noreferrer"
 			className="hover:bg-accent hover:text-accent-foreground flex items-center justify-between border-t border-b p-2 text-sm md:border-t-0"
 		>
 			<span className="font-medium">{title}</span>
