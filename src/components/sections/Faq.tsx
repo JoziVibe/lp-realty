@@ -48,7 +48,7 @@ export function Faq() {
     return (
       <Section>
         <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-4xl font-medium text-foreground">Frequently asked <span className="italic">questions</span></h2>
+            <h2 className="text-4xl font-medium text-foreground">Frequently asked <span className="italic text-primary">questions</span></h2>
             <p className="mt-4 text-lg text-muted-foreground">
                 Our experts provide comprehensive answers to your most pressing questions about real estate.
             </p>

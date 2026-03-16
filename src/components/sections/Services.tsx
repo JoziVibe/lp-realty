@@ -26,7 +26,7 @@ export function Services() {
   return (
     <Section id="services">
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <h2 className="text-4xl font-medium text-foreground">Services: <span className="italic">Expertise Meets Exposure</span></h2>
+        <h2 className="text-4xl font-medium text-foreground">Services: <span className="italic text-primary">Expertise Meets Exposure</span></h2>
         <p className="mt-2 text-lg text-muted-foreground">
           Whether you're buying, selling, or putting your property in front of South Africa's growing real estate audience — LP Realty delivers at every stage.
         </p>

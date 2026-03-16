@@ -67,7 +67,7 @@ export function BondCalculator() {
       
       <div className="container relative py-16 lg:py-24 z-10">
         <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-5xl font-medium">Bond <span className="italic">Calculator</span></h2>
+            <h2 className="text-5xl font-medium">Bond <span className="italic text-primary">Calculator</span></h2>
             <p className="mt-2 text-lg text-gray-200">
               Estimate your monthly bond repayments and see how different terms and interest rates could affect your affordability.
             </p>
