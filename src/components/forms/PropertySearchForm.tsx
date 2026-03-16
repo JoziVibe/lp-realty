@@ -20,14 +20,14 @@ export function PropertySearchForm() {
     }
     
   return (
-    <div className="mt-8 w-full max-w-4xl mx-auto p-4 md:p-2 rounded-3xl md:rounded-full bg-white/90 md:bg-background/70 backdrop-blur-sm border border-neutral-200 md:border-white/20 shadow-xl md:shadow-lg">
+    <div className="mt-8 w-full max-w-4xl mx-auto p-4 md:p-1 rounded-3xl md:rounded-full bg-white/90 md:bg-background/70 backdrop-blur-sm border border-neutral-200 md:border-white/20 shadow-xl md:shadow-lg">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-10 items-center gap-3 md:gap-2">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:flex md:items-center gap-3 md:gap-1">
             <FormField
                 control={form.control}
                 name="location"
                 render={({ field }) => (
-                    <FormItem className="md:col-span-5">
+                    <FormItem className="md:flex-[3]">
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                                 <SelectTrigger className="h-12 text-base bg-white rounded-full border border-neutral-200 md:border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
@@ -51,7 +51,7 @@ export function PropertySearchForm() {
                 control={form.control}
                 name="propertyType"
                 render={({ field }) => (
-                    <FormItem className="md:col-span-2">
+                    <FormItem className="md:flex-1">
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                                 <SelectTrigger className="h-12 text-base bg-white rounded-full border border-neutral-200 md:border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
@@ -76,7 +76,7 @@ export function PropertySearchForm() {
                 control={form.control}
                 name="priceRange"
                 render={({ field }) => (
-                    <FormItem className="md:col-span-2">
+                    <FormItem className="md:flex-1">
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                                 <SelectTrigger className="h-12 text-base bg-white rounded-full border border-neutral-200 md:border-0 focus:ring-2 focus:ring-ring focus:ring-offset-0">
@@ -100,7 +100,7 @@ export function PropertySearchForm() {
                 )}
             />
 
-            <Button type="submit" size="icon" className="h-12 w-full md:w-12 rounded-full md:col-span-1 bg-[#003f47] text-white hover:bg-[#003f47]/90 mt-1 md:mt-0">
+            <Button type="submit" size="icon" className="h-12 w-full md:w-12 rounded-full bg-[#003f47] text-white hover:bg-[#003f47]/90 mt-1 md:mt-0 flex-shrink-0">
                 <Search className="h-5 w-5" />
                 <span className="sr-only">Search</span>
             </Button>
