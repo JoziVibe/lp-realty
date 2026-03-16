@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Header } from '@/components/ui/header-2';
 import { Footer } from '@/components/layout/Footer';
@@ -22,6 +22,10 @@ const instrument_serif = Instrument_Serif({
 export const metadata: Metadata = {
   title: 'LP Realty - Where Luxury Homes Find Their People.',
   description: "We're South Africa's media-first real estate agency — backed by 500,000+ followers, an in-house film studio, and agents who've brokered over R1 billion in deals.",
+};
+
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
