@@ -96,7 +96,7 @@ export function Header() {
 
 			<div
 				className={cn(
-					'bg-background/90 fixed top-16 right-0 bottom-0 left-0 z-50 flex flex-col overflow-hidden border-y md:hidden',
+					'bg-background/95 backdrop-blur-xl fixed top-16 right-0 bottom-0 left-0 z-50 flex flex-col overflow-hidden md:hidden',
 					open ? 'block' : 'hidden',
 				)}
 			>
@@ -104,29 +104,29 @@ export function Header() {
 					data-slot={open ? 'open' : 'closed'}
 					className={cn(
 						'data-[slot=open]:animate-in data-[slot=open]:zoom-in-95 data-[slot=closed]:animate-out data-[slot=closed]:zoom-out-95 ease-out',
-						'flex h-full w-full flex-col justify-between gap-y-2 p-4',
+						'flex h-full w-full flex-col justify-center items-center gap-y-12 p-8 pb-32',
 					)}
 				>
-					<div className="grid gap-y-2">
+					<div className="flex flex-col items-center gap-y-8 w-full">
 						{links.map((link) => (
 							<a
 								key={link.label}
-								className={buttonVariants({
-									variant: 'ghost',
-									className: 'justify-start text-foreground',
-								})}
+								className={cn(
+									"text-foreground hover:text-primary transition-colors text-[28px] font-serif font-medium",
+								)}
 								href={link.href}
 							>
 								{link.label}
 							</a>
 						))}
 					</div>
-					<div className="flex flex-col gap-2">
-						<Button asChild className="w-full rounded-full bg-[#003f47] text-primary-foreground hover:bg-[#003f47]/90">
+					
+                    <div className="flex justify-start w-full max-w-[280px] absolute bottom-12 left-6">
+						<Button asChild className="rounded-full bg-[#003f47] text-primary-foreground hover:bg-[#003f47]/90 px-6 py-6 shadow-xl">
 							<Link href="#">
-                Sell Your Home
-                <ArrowUpRight />
-              </Link>
+                                Sell Your Home
+                                <ArrowUpRight className="ml-2 w-5 h-5" />
+                            </Link>
 						</Button>
 					</div>
 				</div>
