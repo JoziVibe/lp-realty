@@ -21,7 +21,7 @@ const config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
-        serif: ['var(--font-playfair-display)'],
+        serif: ['var(--font-instrument-serif)'],
       },
       colors: {
         border: 'hsl(var(--border))',
